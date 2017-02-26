@@ -74,8 +74,31 @@ menu:
 ```
 
 #### 添加多说评论
+
 参考了[知名主题 `NexT` 的文档](http://theme-next.iissnan.com/third-party-services.html)
 
+#### 删除多说评论框的分享
+
+多说的分享太花了，干脆删除之。
+
+打开 `themes/maupassant/layout/post.jade`，删除下面的代码（36-50行）。
+```jade
+    if theme.duoshuo
+      div(class='ds-share flat' data-thread-key=page.path, data-title=page.title, data-url=page.permalink)
+         .ds-share-inline
+            ul.ds-share-icons-16
+              li(data-toggle='ds-share-icons-more')
+                a(class='ds-more' href='javascript:void(0);') 分享到：
+              li
+                a(class='ds-weibo' href='javascript:void(0);' data-service='weibo') 微博
+              li
+                a(class='ds-qzone' href='javascript:void(0);' data-service='qzone') QQ空间
+              li
+                a(class='ds-qqt' href='javascript:void(0);' data-service='qqt') 腾讯微博
+              li
+                a(class='ds-wechat' href='javascript:void(0);' data-service='wechat') 微信
+            .ds-share-icons-more
+```
 
 ## 参考
 [Hexo 官方文档](https://hexo.io/docs/)
