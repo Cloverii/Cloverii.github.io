@@ -51,7 +51,7 @@ https 方式每次 push 都需要验证用户名密码，不建议。
 
 `npm install hexo-renderer-jade --save` 时候的警告不用在意。
 
-**如果要把本地 Hexo 文件也备份到 Github 的话，这里不要直接 clone 作者的版本，参见我的[下一篇文章](https://cloverii.github.io/2017/02/26/back-up-blog/)。**
+**如果要把本地 Hexo 文件也备份到 Github 的话，这里不要直接 clone 作者的版本，参见我的[下一篇文章](/2017/02/26/back-up-blog/)。**
 
 ### 修改主题配置
 
