@@ -1,8 +1,8 @@
 ---
 title: Ubuntu 下登陆 Drcom 校园网（重庆大学可用）
-date: 2017-03-11 19:35:52
-categories: Tech
-tags: Ubuntu Drcom
+date: 2017-03-8 23:35:52
+categories: TECH
+tags: [Ubuntu, Drcom]
 ---
 之前是同学给了我一份 Python 脚本，搬校区之后那个就不行了 - -，应该是服务器不一样的原因。后来发现 Github 上有一个[开源项目](https://github.com/drcoms/drcom-generic)，按照 [Wiki](https://github.com/drcoms/drcom-generic/wiki/d%E7%89%88%E7%AE%80%E7%95%A5%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E) 来了一发，果然成功啦~ 感谢 contributors 们！
 
@@ -200,7 +200,7 @@ def keep_alive2(*args):
             log('[keep-alive2] recv1/unexpected',data.encode('hex'))
     #log('[keep-alive2] recv1',data.encode('hex'))
     
-    ran += random.randint(1,10)   
+    ran += random.randint(1,10) 
     packet = keep_alive_package_builder(svr_num, dump(ran),'\x00'*4,1,False)
     log('[keep-alive2] send2',packet.encode('hex'))
     s.sendto(packet, (svr, 61440))
@@ -215,7 +215,7 @@ def keep_alive2(*args):
     tail = data[16:20]
 
 
-    ran += random.randint(1,10)   
+    ran += random.randint(1,10) 
     packet = keep_alive_package_builder(svr_num,dump(ran),tail,3,False)
     log('[keep-alive2] send3',packet.encode('hex'))
     s.sendto(packet, (svr, 61440))
