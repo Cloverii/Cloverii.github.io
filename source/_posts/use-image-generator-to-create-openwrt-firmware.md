@@ -86,5 +86,6 @@ make: *** [image] Error 2
 ```bash
 scp root@138.197.222.50:/root/openwrt/OpenWrt-ImageBuilder-15.05.1-ar71xx-generic.Linux-x86_64/bin/ar71xx/openwrt-15.05.1-ar71xx-generic-tl-wr841n-v8-squashfs-sysupgrade.bin ./home/minway 
 ```
+(root 权限执行会报错)
 
 接下来就是刷入啦。
