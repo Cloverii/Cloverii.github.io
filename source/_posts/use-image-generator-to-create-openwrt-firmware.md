@@ -3,6 +3,7 @@ title: 使用 Image Generator 工具生成 OpenWrt 固件
 date: 2017-03-11 14:11:08
 categories: TECH
 tags: [OpenWrt]
+toc: true
 ---
 某宝买了个二手硬改路由器，TL-WR842N，刷好明月永在的 OpenWrt 固件和 Breed Web 控制台。本来作为没玩过路由器的弱弱我是懒得刷机希望到手就能用的，结果 `opkg update` 报错，有些包已经找不到了，不得不重刷原版 OW。又一次偷懒失败了QAQ。由于是硬改机器，16M 闪存，只能自己编译。
 
