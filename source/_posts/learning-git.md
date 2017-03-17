@@ -1,7 +1,7 @@
 ---
 title: Git 学习记录
 date: 2017-03-17 00:19:40
-categories: TECH
+categories: LEARNING
 tags: [Git]
 toc: true
 ---

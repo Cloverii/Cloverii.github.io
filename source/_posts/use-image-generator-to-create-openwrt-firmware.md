@@ -13,7 +13,7 @@ Ubuntu 14.04
 我是在自己的 VPS 上完成的整个过程，因为 openwrt.org 正常访问奇慢无比。
 
 ### 下载 Image Generator
-Image Generator ["is a pre-compiled OpenWrt build environment suitable for creating custom images without the need for compiling. "](https://wiki.openwrt.org/doc/howto/obtain.firmware.generate) 从[恩山某贴](http://www.right.com.cn/forum/thread-172507-1-1.html)看到的，总之方便快捷，值得拥有。
+Image Generator ["is a pre-compiled OpenWrt build environment suitable for creating custom images without the need for compiling. "](https://wiki.openwrt.org/doc/howto/obtain.firmware.generate) 从[恩山某贴](http://www.right.com.cn/forum/forum.php?mod=viewthread&tid=172507&page=1)看到的，总之方便快捷，值得拥有。
 
 下载按照文档来就好，链接要根据自己路由器的架构修改。
 
@@ -89,4 +89,7 @@ scp root@138.197.222.50:/root/openwrt/OpenWrt-ImageBuilder-15.05.1-ar71xx-generi
 ```
 (root 权限执行会报错)
 
-接下来就是刷入啦。
+接下来就是[刷入及配置](/2017/03/17/upgrade-firmware-of-my-router/)啦。
+
+### 还参考了
+https://cokebar.info/archives/90
