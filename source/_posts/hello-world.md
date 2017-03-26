@@ -65,7 +65,7 @@ https 方式每次 push 都需要验证用户名密码，不建议。
 
 *补充*
 
-*某次重装系统之后， hexo 安装好之后执行 `hexo s` 虽然看起来还算正常但报了奇怪的错误，似乎是 sass 的问题，按照提示执行 `npm rebuild node-sass` 之后再执行 `hexo s` 直接 `core dump` 了。无奈执行 `npm uninstall hexo-renderer-sass` 准备卸载重装，然而卸载完 server 似乎就正常了……感觉非常微妙，凑合用着吧*
+*某次重装系统之后， hexo 安装好之后执行 `hexo s` 虽然看起来还算正常但报了奇怪的错误，似乎是 sass 的问题，按照提示执行 `npm rebuild node-sass` 之后再执行 `hexo s` 直接 `Bus error (core dumped)` 了。无奈执行 `npm uninstall hexo-renderer-sass` 准备卸载重装，然而卸载完 server 似乎就正常了……感觉非常微妙，凑合用着吧*
 
 #### 修改主题配置
 

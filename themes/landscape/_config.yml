@@ -2,7 +2,7 @@
 menu:
   Home: /
   Archives: /archives
-rss: /atom.xml
+#rss: /atom.xml
 
 # Content
 excerpt_link: Read More
@@ -23,7 +23,7 @@ index_widgets:
 # - tagcloud
 # - archive
 
-# widget behavior
+    # widget behavior
 archive_type: 'monthly'
 show_count: false
 
