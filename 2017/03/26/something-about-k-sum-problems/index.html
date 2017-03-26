@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>从 K Sum 问题想到的 | WMW</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="LeetCode 上有好几道 K sum 的题：1. Two Sum (E), 15. 3Sum (M), 16. 3Sum Closest (M), 18. 4Sum(M)。大致就是给一个无序数组和一个 target，从数组里找出 k 个数使它们的和为 target （或最接近 target)。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从 K Sum 问题想到的">
+<meta property="og:url" content="https://cloverii.github.io/2017/03/26/something-about-k-sum-problems/index.html">
+<meta property="og:site_name" content="WMW">
+<meta property="og:description" content="LeetCode 上有好几道 K sum 的题：1. Two Sum (E), 15. 3Sum (M), 16. 3Sum Closest (M), 18. 4Sum(M)。大致就是给一个无序数组和一个 target，从数组里找出 k 个数使它们的和为 target （或最接近 target)。">
+<meta property="og:updated_time" content="2017-03-26T13:53:08.682Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="从 K Sum 问题想到的">
+<meta name="twitter:description" content="LeetCode 上有好几道 K sum 的题：1. Two Sum (E), 15. 3Sum (M), 16. 3Sum Closest (M), 18. 4Sum(M)。大致就是给一个无序数组和一个 target，从数组里找出 k 个数使它们的和为 target （或最接近 target)。">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">WMW</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://cloverii.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-something-about-k-sum-problems" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/26/something-about-k-sum-problems/" class="article-date">
+  <time datetime="2017-03-26T08:32:14.000Z" itemprop="datePublished">2017-03-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/LEARNING/">LEARNING</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      从 K Sum 问题想到的
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>LeetCode 上有好几道 K sum 的题：<a href="https://leetcode.com/problems/two-sum/#/description" target="_blank" rel="external">1. Two Sum (E)</a>, <a href="https://leetcode.com/problems/3sum/#/description" target="_blank" rel="external">15. 3Sum (M)</a>, <a href="https://leetcode.com/problems/3sum-closest/" target="_blank" rel="external">16. 3Sum Closest (M)</a>, <a href="https://leetcode.com/problems/4sum/#/description" target="_blank" rel="external">18. 4Sum(M)</a>。大致就是给一个无序数组和一个 target，从数组里找出 k 个数使它们的和为 target （或最接近 target)。</p>
+<a id="more"></a>
+<p>2Sum 因为要输出两个数的 indices，加上是 Easy，没多想就写了个 O(n^2) 的暴力。3Sum 要求的是输出这三个数，就排了个序，枚举前两个数再二分第三个数，O(n^2logn)。到 3Sum Closest 的时候就纠结了，枚举 + 二分虽然理论上也还能凑合凑合，但是太麻烦了(虽然我确实这么 A 了)。等看到 4Sum 就尴尬了，总不能继续枚举前三个数吧。想了半天也没什么头绪（可见思维定势可怕），只好滚回 2Sum 看 Solutions。真是一看吓一跳……</p>
+<h3 id="2Sum"><a href="#2Sum" class="headerlink" title="2Sum"></a>2Sum</h3><p><strong>Description:</strong><br>Given an array of integers, return indices of the two numbers such that they add up to a specific target.<br>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>暴力枚举 <em>O(n^2)</em></li>
+<li>带 indices sort 一遍，然后 two pointers <em>O(nlogn)</em><br>这样的话还要写个 compareTo()，我当然是拒绝的<br>不过是后面 Nsum (N &gt; 2) 的基础</li>
+<li><p>利用 HashMap(Java), unordered_map(C++) <em>平均O(n)</em><br>原理是从头开始扫一遍数组，如果 target - nums[i] 不在 map 里，就把 (nums[i], i) 丢进 map，如果在的话就是 answer 了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</div><div class="line">        Map&lt;Integer, Integer&gt; mp = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</div><div class="line">            <span class="keyword">int</span> tmp = target - nums[i];</div><div class="line">            <span class="keyword">if</span>(mp.containsKey(tmp)) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;mp.get(tmp), i&#125;;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                mp.put(nums[i], i);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">0</span>, <span class="number">0</span>&#125;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>在某 HashMap 写法的讨论区还看见了<a href="https://discuss.leetcode.com/topic/2447/accepted-java-o-n-solution/31" target="_blank" rel="external">一个比较丧病的写法</a>，不用 HashMap 直接开数组……虽然也花了点时间控制了下数组的大小但是对极限数据并没有什么用。只能说数据弱吧，不然这种程度的空间换时间简直找死啊。</p>
+</li>
+</ol>
+<p>PS: 虽然似乎听韬韬提过 unordered_map 但是从来没有用过，也是第一次知道它的插入查找平均复杂度居然是线性。cplusplus.com 上说是它是把元素根据 hash 值丢进桶里面的，那就相当于 Java 的 HashMap 咯，单个元素的插入查找比 map (TreeMap) 要快。</p>
+<h3 id="3Sum-amp-amp-3Sum-Closest"><a href="#3Sum-amp-amp-3Sum-Closest" class="headerlink" title="3Sum &amp;&amp; 3Sum Closest"></a>3Sum &amp;&amp; 3Sum Closest</h3><p><strong>Description:</strong><br>3Sum:<br>Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.<br>Note: The solution set must not contain duplicate triplets.</p>
+<p>3Sum Closest:<br>Given an array S of n integers, find three integers in S such that the sum is closest to a given number, target. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>像我一开始一样，sort 一把再枚举前两个数+二分第三个数 <em>O(n^2logn)</em></li>
+<li>sort 一把，枚举一个数 + two pointers <em>O(n^2)</em><br>3Sum Closest 在 3Sum 的基础上改改就好</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; threeSum(<span class="keyword">int</span>[] nums) &#123;</div><div class="line">        List&lt;List&lt;Integer&gt;&gt; ans = <span class="keyword">new</span> LinkedList&lt;&gt;(); <span class="comment">// or new LinkedList&lt;List&lt;Integer&gt;() </span></div><div class="line">        Arrays.sort(nums);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</div><div class="line">            <span class="keyword">if</span>(i &gt; <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>]) <span class="keyword">continue</span>;</div><div class="line">            <span class="keyword">int</span> target = <span class="number">0</span> - nums[i];</div><div class="line">            </div><div class="line">            <span class="keyword">int</span> lo = i + <span class="number">1</span>, hi = nums.length - <span class="number">1</span>;</div><div class="line">            <span class="keyword">while</span>(lo &lt; hi) &#123;</div><div class="line">                <span class="keyword">int</span> sum = nums[lo] + nums[hi];</div><div class="line">                <span class="keyword">if</span>(sum &lt; target) &#123;</div><div class="line">                    lo++;</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(sum &gt; target) &#123;</div><div class="line">                    hi--;</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    ans.add(Arrays.asList(nums[i], nums[lo], nums[hi]));</div><div class="line">                    <span class="keyword">while</span>(lo &lt; hi &amp;&amp; nums[lo] == nums[lo + <span class="number">1</span>]) lo++;</div><div class="line">                    <span class="keyword">while</span>(lo &lt; hi &amp;&amp; nums[hi] == nums[hi - <span class="number">1</span>]) hi--;</div><div class="line">                    lo++; hi--;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> ans;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="4Sum"><a href="#4Sum" class="headerlink" title="4Sum"></a>4Sum</h3><p><strong>Description:</strong><br>Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.<br>Note: The solution set must not contain duplicate quadruplets.</p>
+<p>到了这一步，如果继续写 two pointers 的话，就要开始考虑代码重用性了……</p>
+<p>下面代码中剪枝的灵感来自<a href="https://discuss.leetcode.com/topic/22705/python-140ms-beats-100-and-works-for-n-sum-n-2" target="_blank" rel="external">这里</a>。太久没写过搜索了如果不是看见这份代码根本想不起来剪枝这回事了……<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; fourSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</div><div class="line">        Arrays.sort(nums);</div><div class="line">        <span class="keyword">return</span> NSum(<span class="number">4</span>, nums, <span class="number">0</span>, target);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">private</span> ArrayList&lt;List&lt;Integer&gt;&gt; NSum(<span class="keyword">int</span> n, <span class="keyword">int</span>[] nums, <span class="keyword">int</span> begin, <span class="keyword">int</span> target) &#123;</div><div class="line">        ArrayList&lt;List&lt;Integer&gt;&gt; ans = <span class="keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();</div><div class="line">        <span class="keyword">if</span>(n == <span class="number">2</span>) &#123;</div><div class="line">            <span class="keyword">int</span> lo = begin; <span class="keyword">int</span> hi = nums.length - <span class="number">1</span>;</div><div class="line">            <span class="keyword">while</span>(lo &lt; hi) &#123;</div><div class="line">                <span class="keyword">int</span> sum = nums[lo] + nums[hi];</div><div class="line">                <span class="keyword">if</span>(sum &lt; target) &#123;</div><div class="line">                    lo++;</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(sum &gt; target) &#123;</div><div class="line">                    hi--;</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    ans.add(<span class="keyword">new</span> LinkedList&lt;Integer&gt;(Arrays.asList(nums[lo], nums[hi])));</div><div class="line">                    <span class="keyword">while</span>(lo &lt; hi &amp;&amp; nums[lo] == nums[lo + <span class="number">1</span>]) lo++;</div><div class="line">                    <span class="keyword">while</span>(lo &lt; hi &amp;&amp; nums[hi] == nums[hi - <span class="number">1</span>]) hi--;</div><div class="line">                    lo++; hi--;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            List&lt;List&lt;Integer&gt;&gt; tmp<span class="comment">/* = new ArrayList&lt;&gt;()*/</span>;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = begin; i &lt; nums.length - n + <span class="number">1</span>; i++) &#123;</div><div class="line">                <span class="keyword">if</span>(nums[i] * n &gt; target) <span class="keyword">break</span>; <span class="comment">// pruning</span></div><div class="line">                tmp = NSum(n - <span class="number">1</span>, nums, i + <span class="number">1</span>, target - nums[i]);</div><div class="line">                <span class="keyword">if</span>(!tmp.isEmpty()) &#123;</div><div class="line">                    <span class="keyword">for</span>(List&lt;Integer&gt; l: tmp) &#123;</div><div class="line">                        l.add(<span class="number">0</span>, nums[i]);</div><div class="line">                    &#125;</div><div class="line">                    ans.addAll(tmp);</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">while</span>(i &lt; nums.length - <span class="number">1</span> &amp;&amp; nums[i] == nums[i + <span class="number">1</span>]) i++;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> ans;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>但是又看到了<a href="https://discuss.leetcode.com/topic/12893/on-average-o-n-2-and-worst-case-o-n-3-java-solution-by-reducing-4sum-to-2sum" target="_blank" rel="external">一个神奇的利用 HashMap 的 solution</a>，平均 O(n^2)，最坏 O(n^3)，吓得我瓜子都掉了……</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
+<li>暴力 <em>O(n^k)</em></li>
+<li>two pointers <em>O(n^(k-1))(k &gt; 2) || O(nlogn)(k ==2)</em></li>
+<li>复杂度和可扩展性成谜的 HashMap </li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cloverii.github.io/2017/03/26/something-about-k-sum-problems/" data-id="cj0qrckii000af2w2c60nz72z" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/03/26/something-wrong-with-blog-theme/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          博客主题 maupassant 挂掉了
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/17/upgrade-firmware-of-my-router/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">路由器刷 OpenWrt 配置及破解 Dr.com</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LEARNING/">LEARNING</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OTHERS/">OTHERS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TECH/">TECH</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dr-com/">Dr.com</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenWrt/">OpenWrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Dr-com/" style="font-size: 20px;">Dr.com</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/OpenWrt/" style="font-size: 20px;">OpenWrt</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/26/something-wrong-with-blog-theme/">博客主题 maupassant 挂掉了</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/something-about-k-sum-problems/">从 K Sum 问题想到的</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/17/upgrade-firmware-of-my-router/">路由器刷 OpenWrt 配置及破解 Dr.com</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/17/learning-git/">Git 学习记录</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/11/log-in-campus-network-on-ubuntu/">Ubuntu 下登陆 Drcom 校园网（重庆大学可用）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Cloverii<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
