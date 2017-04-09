@@ -11,14 +11,14 @@ toc: true
 
 <!--more-->
 
-### 版本
+## 版本
 Ubuntu 14.04
 git version 1.9.1
 Node.js  v6.10.0
 npm  3.10.10
 hexo  3.2.2
 
-### 安装
+## 安装
 
 安装还是推荐[官方文档](https://hexo.io/docs/)，省得被网上形形色色的教程坑了。
 
@@ -29,9 +29,9 @@ hexo  3.2.2
 *补充*
 *某次重装系统没格式化 /home，安装好 Node.js, npm 和 hexo 之后，在站点根目录下执行 `hexo` 提示要再执行 `npm install hexo --save`，执行完之后基本就正常了。*
 
-### 配置
+## 配置
 
-#### 基本信息
+### 基本信息
 
 站点根目录下的 `_config.yml` 文件包含了 Hexo 本身的配置，此处依然可以参考[官方文档](https://hexo.io/docs/configuration.html)。
 
@@ -55,7 +55,7 @@ https 方式每次 push 都需要验证用户名密码，不建议。
 
 再后来看到 [NexT 文档](http://theme-next.iissnan.com/getting-started.html#select-language)里的简体中文写法是`zh-Hans`，就查了查,看到了[这个](https://www.zhihu.com/question/20797118)，挺乱的反正。
 
-#### 更换主题 maupassant
+### 更换主题 maupassant
 
 找到了一个简洁的主题 maupassant，使用参考[开发者博客](https://www.haomwei.com/technology/maupassant-hexo.html)。
 
@@ -63,15 +63,15 @@ https 方式每次 push 都需要验证用户名密码，不建议。
 
 **如果要把本地 Hexo 文件也备份到 Github 的话，这里不要直接 clone 作者的版本，参见我的[下一篇文章](/2017/02/26/back-up-blog/)。**
 
-*补充*
+***补充***
 
 *某次重装系统之后， hexo 安装好之后执行 `hexo s` 虽然看起来还算正常但报了奇怪的错误，似乎是 sass 的问题，按照提示执行 `npm rebuild node-sass` 之后再执行 `hexo s` 直接 `Bus error (core dumped)` 了。无奈执行 `npm uninstall hexo-renderer-sass` 准备卸载重装，然而卸载完 server 似乎就正常了……感觉非常微妙，凑合用着吧*
 
-#### 修改主题配置
+### 修改主题配置
 
 找到站点文件夹里的 `themes/maupassant/_config.yml` 文件，这份是**主题配置文件**。
 
-##### 注释 About 和 RSS订阅页面
+#### 注释 About 和 RSS订阅页面
 
 ```md
 menu:
@@ -88,12 +88,14 @@ menu:
 #    directory: atom.xml
 #    icon: fa-rss
 ```
+***补充***
+多说已于 2017.06.01 停止服务，改用 disqus。
 
-##### 添加多说评论
+#### ~~添加多说评论~~
 
 参考了[知名主题 `NexT` 的文档](http://theme-next.iissnan.com/third-party-services.html)
 
-##### 删除多说评论框的分享
+#### ~~删除多说评论框的分享~~
 
 多说的分享太花了，干脆删除之。
 
@@ -116,7 +118,7 @@ menu:
             .ds-share-icons-more
 ```
 
-### 还参考了
+## 还参考了
 
 http://taosama.github.io/2016/03/09/Hello%20World%20%E2%80%94%E2%80%94%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B
 http://theme-next.iissnan.com/third-party-services.html
