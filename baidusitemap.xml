@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+  <url>
+    <loc>https://cloverii.github.io/2017/02/19/hello-world/</loc>
+    <lastmod>2017-04-09T03:57:04.902Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World -- 博客搭建记录</title>
+        <pubTime>2017-02-19T12:46:25.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017/04/09/my-gsoc-2017/</loc>
+    <lastmod>2017-04-09T03:52:49.762Z</lastmod>
+    <data>
+        <display>
+        <title>记录一下我的 GSoC 2017</title>
+        <pubTime>2017-04-09T01:47:29.000Z</pubTime>
+        
+        <tag>Thoughts</tag>
+         
+         
+           
+             
+              <breadCrumb title="OTHERS" url="https://cloverii.github.io/categories/OTHERS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017/03/11/problems-to-be-solved/</loc>
+    <lastmod>2017-04-04T16:08:16.128Z</lastmod>
+    <data>
+        <display>
+        <title>待解决</title>
+        <pubTime>2017-03-11T05:36:38.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="OTHERS" url="https://cloverii.github.io/categories/OTHERS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017/04/04/why-do-i-start-blogging/</loc>
+    <lastmod>2017-04-04T16:03:54.944Z</lastmod>
+    <data>
+        <display>
+        <title>为什么要写博客</title>
+        <pubTime>2017-04-04T12:59:58.000Z</pubTime>
+        
+        <tag>Thoughts</tag>
+         
+         
+           
+             
+              <breadCrumb title="Others" url="https://cloverii.github.io/categories/Others/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017/03/26/something-wrong-with-blog-theme/</loc>
+    <lastmod>2017-04-04T15:33:02.936Z</lastmod>
+    <data>
+        <display>
+        <title>博客主题 maupassant 挂掉了</title>
+        <pubTime>2017-03-26T13:55:50.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017/03/09/log-in-campus-network-on-ubuntu/</loc>
+    <lastmod>2017-04-04T13:07:05.392Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu 下登陆 Drcom 校园网（重庆大学可用）</title>
+        <pubTime>2017-03-09T15:35:52.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Dr.com</tag>
+         
+         
+           
+             
+              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017/03/11/use-image-generator-to-create-openwrt-firmware/</loc>
+    <lastmod>2017-03-31T01:15:32.517Z</lastmod>
+    <data>
+        <display>
+        <title>使用 Image Generator 工具生成 OpenWrt 固件</title>
+        <pubTime>2017-03-11T06:11:08.000Z</pubTime>
+        
+        <tag>OpenWrt</tag>
+         
+         
+           
+             
+              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017/03/26/something-about-k-sum-problems/</loc>
+    <lastmod>2017-03-31T00:58:23.177Z</lastmod>
+    <data>
+        <display>
+        <title>从 K Sum 问题想到的</title>
+        <pubTime>2017-03-26T08:32:14.000Z</pubTime>
+        
+        <tag>Algorithm</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="LEARNING" url="https://cloverii.github.io/categories/LEARNING/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017/03/17/upgrade-firmware-of-my-router/</loc>
+    <lastmod>2017-03-31T00:55:09.669Z</lastmod>
+    <data>
+        <display>
+        <title>路由器刷 OpenWrt 配置及破解 Dr.com</title>
+        <pubTime>2017-03-17T11:10:26.000Z</pubTime>
+        
+        <tag>Dr.com</tag>
+         
+        <tag>OpenWrt</tag>
+         
+         
+           
+             
+              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017/03/17/learning-git/</loc>
+    <lastmod>2017-03-31T00:55:09.605Z</lastmod>
+    <data>
+        <display>
+        <title>Git 学习记录</title>
+        <pubTime>2017-03-16T16:19:40.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="LEARNING" url="https://cloverii.github.io/categories/LEARNING/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017/02/26/back-up-blog/</loc>
+    <lastmod>2017-03-17T09:38:20.605Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo 博客备份</title>
+        <pubTime>2017-02-26T07:11:09.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
+          
+        </display>
+    </data>
+    </url>
+
+</urlset>
