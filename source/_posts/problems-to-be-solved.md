@@ -5,18 +5,18 @@ categories: OTHERS
 tags: 
 ---
 <!--more-->
-[多说已经宣布到170601正式关停服务](http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241)，这两个问题不需要解决了……准备换disqus
-~~多说评论框登陆按钮重叠~~
-~~重叠大小与多说评论框的主题有关，与博客主题似乎也有关系。目测如果能去掉登陆按钮的边框应该就正常了。~~
+[多说已经宣布170601正式关停服务](http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241)，这两个问题不需要解决了……准备换disqus
+### ~~多说评论框登陆按钮重叠~~
+重叠大小与多说评论框的主题有关，与博客主题似乎也有关系。目测如果能去掉登陆按钮的边框应该就正常了。
 
-~~多说头像的 http~~
-~~[2016年6月15日以后使用 Github Pages 创建的站点，并且 使用.github.io 域名的，均会强制使用 https 连接。](https://help.github.com/articles/securing-your-github-pages-site-with-https/)~~
+### ~~多说头像的 http~~
+2016年6月15日以后使用 Github Pages 创建的站点，并且 使用.github.io 域名的，均会强制使用 https 连接。[见这里](https://help.github.com/articles/securing-your-github-pages-site-with-https/)。
 
-~~然而多说的用户头像是 http，黄色小三角逼死强迫症了 QAQ~~
+然而多说的用户头像是 http，黄色小三角逼死强迫症了 QAQ
 
-~~有空研究。~~
+有空研究。
 
-### 主题代码高亮显示的不是等宽字体
+### ~~主题代码高亮显示的不是等宽字体~~
 
 需求: 等宽 + 正常字号
 

@@ -1,7 +1,7 @@
 ---
 title: 为什么要写博客
 date: 2017-04-04 20:59:58
-categories: Others
+categories: OTHERS
 tags: Thoughts
 ---
 

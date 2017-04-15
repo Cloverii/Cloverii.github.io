@@ -4,10 +4,9 @@ date: 2017-03-26 21:55:50
 tags:
 ---
 03-26 更新：
+`git reset` 居然好了……原来只需要这么简单么？`diff` 了一下也就是 `package.json`里少了一行 `"hexo-render-sass": "0.2.0"`，迷惑。
 
-git reset 居然好了……原来只需要这么简单么？diff 了一下也就是 `package.json`里少了一行 `"hexo-render-sass": "0.2.0"`，迷惑。
 ***
-
 博客的主题被我玩坏了，虽然我只是想改下代码高亮部分...........坏掉之后把 css 改回去都没有用了，费解。
 
 疑似 `hexo-renderer-sass` 模块的问题，然而重装也不行，暂时换回默认主题 landscape，有空直接重装系统好了。
