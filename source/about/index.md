@@ -1,6 +1,6 @@
 ---
 layout: page
-comment: false
+comments: false
 ---
 
 # WMW

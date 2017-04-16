@@ -123,5 +123,4 @@ minway@Minway:~/leetcode$ git status
 ## 参考
 [廖雪峰老师的 Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)。
 https://segmentfault.com/q/1010000002960891
-
-
+https://tonydeng.github.io/2015/07/08/how-to-undo-almost-anything-with-git/
