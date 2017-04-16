@@ -26,7 +26,7 @@ hexo  3.2.2
 
 但是 `npm install -g hexo-cli` 之后 `hexo` 提示 `command not found`，后来按照[这篇博客](http://blog.csdn.net/miss_fang/article/details/53763308)的方法解决了，就是每次都要 `sudo`。[Docs](https://docs.npmjs.com/getting-started/fixing-npm-permissions) 里对此也有说明。
 
-*补充*
+***补充***
 *某次重装系统没格式化 /home，安装好 Node.js, npm 和 hexo 之后，在站点根目录下执行 `hexo` 提示要再执行 `npm install hexo --save`，执行完之后基本就正常了。*
 
 ## 配置
@@ -34,6 +34,8 @@ hexo  3.2.2
 ### 基本信息
 
 站点根目录下的 `_config.yml` 文件包含了 Hexo 本身的配置，此处依然可以参考[官方文档](https://hexo.io/docs/configuration.html)。
+
+默认的文章链接分级太多，不利于搜索引擎检索。将 permalink 字段改为 `permalink: :year-:month-:day/:title/`。
 
 最后 deploy 部分，用 ssh 方式的话：
 
@@ -71,9 +73,9 @@ https 方式每次 push 都需要验证用户名密码，不建议。
 
 找到站点文件夹里的 `themes/maupassant/_config.yml` 文件，这份是**主题配置文件**。
 
-#### 注释 About 和 RSS订阅页面
+#### 注释 RSS 订阅页面
 
-```md
+```
 menu:
   - page: home
     directory: .
@@ -81,16 +83,25 @@ menu:
   - page: archive
     directory: archives/
     icon: fa-archive 
-#  - page: about
-#    directory: about/
-#    icon: fa-user
+  - page: about
+    directory: about/
+    icon: fa-user
 #  - page: rss
 #    directory: atom.xml
 #    icon: fa-rss
 ```
+#### 删除首页显示文章评论数
+换 disqus 之后不知为何首页文章评论数总有几篇文章不能正常显示，disqus 访问的问题？干脆删了。
+`/themes/maupassant/layout/index.jade` 中删除下面的语句。
+
+```
+      if theme.duoshuo
+        a.ds-thread-count(data-thread-key=post.path, href=url_for(post.path) + '#comments')
+	  if theme.disqus
+        a.disqus-comment-count(data-disqus-identifier=post.path, href=url_for(post.path) + '#disqus_thread')
+```
 ***补充***
 多说已于 2017.06.01 停止服务，改用 disqus。
-
 #### ~~添加多说评论~~
 
 参考了[知名主题 `NexT` 的文档](http://theme-next.iissnan.com/third-party-services.html)
@@ -100,7 +111,7 @@ menu:
 多说的分享太花了，干脆删除之。
 
 打开 `themes/maupassant/layout/post.jade`，删除下面的代码（36-50行）。
-```jade
+```
     if theme.duoshuo
       div(class='ds-share flat' data-thread-key=page.path, data-title=page.title, data-url=page.permalink)
          .ds-share-inline

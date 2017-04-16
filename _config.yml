@@ -4,7 +4,7 @@
 
 # Site
 title: WMW's Blog
-subtitle: 
+subtitle: 好想赶快变强呢
 description: Start from Zero
 author: Cloverii
 language: zh-CN
@@ -39,12 +39,12 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace:
 
 # Category & Tag
-default_category: uncategorized
+default_category: OTHERS
 category_map:
 tag_map:
 

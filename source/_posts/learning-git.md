@@ -15,7 +15,7 @@ toc: true
  `git config --global user.name "Your Name"`
  `git config --global user.email "email@example.com"`  
  参数 `--global` 可选
- 
+
 ## 安装版本库
  `git init` 创建一个空目录 打开
   当前目录下会出现一个 .git 的隐藏目录
@@ -25,9 +25,10 @@ toc: true
 
 **版本控制系统只能跟踪文本文件的改动，二进制文件不行**
 
-把文件添加到版本库
+### 添加文件到版本库
 `git add <file> `  把提交的修改放到暂存区
 `git commit -m "This is the description" ` 把暂存区的修改提交到分支
+`git commit --amend` 修改最后一次提交的注释（在`.git/COMMIT_EDITMSG`中）
 
 ## 修改
 
@@ -68,14 +69,14 @@ minway@Minway:~/leetcode$ git status
 
 ## 撤销修改
 
- - 在工作区修改，还未 add 到暂存区
- `git commit checkout -- <file>` 
- `checkout` 命令即为用版本库的版本替换工作区的版本
- - 已 add 到暂存区
- `git reset HEAD file`
- `git commit checkout -- <file>`
- - 已经提交到版本库
- `git reset ***` 版本回退
+- 在工作区修改，还未 add 到暂存区
+   `git commit checkout -- <file>` 
+    `checkout` 命令即为用版本库的版本替换工作区的版本
+- 已 add 到暂存区
+   `git reset HEAD file`
+    `git commit checkout -- <file>`
+- 已经提交到版本库
+   `git reset ***` 版本回退
 
 ## 删除文件
 `$ git rm <file>` 从版本库中删除文件
@@ -121,6 +122,6 @@ minway@Minway:~/leetcode$ git status
 
 ## 参考
 [廖雪峰老师的 Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)。
-
+https://segmentfault.com/q/1010000002960891
 
 
