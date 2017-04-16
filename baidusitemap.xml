@@ -4,6 +4,49 @@
 
     
   <url>
+    <loc>https://cloverii.github.io/2017-04-16/wtm-2017-gdg-chongqing/</loc>
+    <lastmod>2017-04-16T16:11:41.594Z</lastmod>
+    <data>
+        <display>
+        <title>Women Techmakers 2017 GDG Chongqing</title>
+        <pubTime>2017-04-16T13:34:26.000Z</pubTime>
+        
+        <tag>Thoughts</tag>
+         
+        <tag>GDG</tag>
+         
+         
+           
+             
+              <breadCrumb title="OTHERS" url="https://cloverii.github.io/categories/OTHERS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017-03-17/learning-git/</loc>
+    <lastmod>2017-04-16T14:06:00.110Z</lastmod>
+    <data>
+        <display>
+        <title>Git 学习记录</title>
+        <pubTime>2017-03-16T16:19:40.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="LEARNING" url="https://cloverii.github.io/categories/LEARNING/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>https://cloverii.github.io/2017-02-19/hello-world/</loc>
     <lastmod>2017-04-16T12:52:17.914Z</lastmod>
     <data>
@@ -17,27 +60,6 @@
            
              
               <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>https://cloverii.github.io/2017-03-17/learning-git/</loc>
-    <lastmod>2017-04-16T09:52:42.257Z</lastmod>
-    <data>
-        <display>
-        <title>Git 学习记录</title>
-        <pubTime>2017-03-16T16:19:40.000Z</pubTime>
-        
-        <tag>Git</tag>
-         
-         
-           
-             
-              <breadCrumb title="LEARNING" url="https://cloverii.github.io/categories/LEARNING/"/>
           
         </display>
     </data>
