@@ -25,8 +25,13 @@ toc: true
 
 **版本控制系统只能跟踪文本文件的改动，二进制文件不行**
 
-### 添加文件到版本库
+## 添加文件到版本库
 `git add <file> `  把提交的修改放到暂存区
+```bash
+	git add -A #stages All
+	git add .  #stages new and modified, without deleted
+	git add -u #stages modified and deleted, without new
+```
 `git commit -m "This is the description" ` 把暂存区的修改提交到分支
 `git commit --amend` 修改最后一次提交的注释（在`.git/COMMIT_EDITMSG`中）
 
@@ -120,7 +125,31 @@ minway@Minway:~/leetcode$ git status
     last = lg -1
 ```
 
+## 一些场景
+
+fork 了某个仓库并做出了修改但又不能 PR，但又需要合并上游更新：
+```bash
+git remote add upstream git@github.com:tufu9441/maupassant-hexo.git
+git fetch upstream
+git checkout master #切换到本地 master 分支
+git merge upstream/master
+```
+这时出现了问题：
+```
+CONFLICT (content): Merge conflict in _config.yml
+Automatic merge failed; fix conflicts and then commit the result.
+```
+解决：
+
+如果文件需要删除 `git rm`
+如果文件需要修改 打开编辑器修改成需要的情况
+
+最后 `add + cm` 即可。
 ## 参考
-[廖雪峰老师的 Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)。
+
+[廖雪峰老师的 Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 https://segmentfault.com/q/1010000002960891
 https://tonydeng.github.io/2015/07/08/how-to-undo-almost-anything-with-git/
+http://jinlong.github.io/2015/10/12/syncing-a-fork/
+https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/
+http://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add

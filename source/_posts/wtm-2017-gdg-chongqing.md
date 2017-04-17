@@ -4,7 +4,7 @@ date: 2017-04-16 21:34:26
 categories: OTHERS
 tags: [GDG, Thoughts]
 ---
-![](http://ooie9cjod.bkt.clouddn.com/17-4-17/82621618-file_1492358610695_10506.png)
+![](https://ooo.0o0.ooo/2017/04/17/58f49d24bdc12.png)
 
 其实这次活动最大的收获是这张摆拍（雾）的照片吧（大雾）。终于有一张看起来 hin 像程序媛的照片了！（虽然看起来有点蠢）Github 头像一换，美滋滋~
 
