@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>https://cloverii.github.io/2017-04-19/build-linux-kernel-from-source2/</loc>
+    <lastmod>2017-04-19T15:40:26.139Z</lastmod>
+    <data>
+        <display>
+        <title>从源码编译安装 Linux 内核之二（服务器）</title>
+        <pubTime>2017-04-19T11:52:46.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>kernel</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tech" url="https://cloverii.github.io/categories/Tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017-04-19/build-linux-kernel-from-source1/</loc>
+    <lastmod>2017-04-19T15:40:04.783Z</lastmod>
+    <data>
+        <display>
+        <title>从源码编译安装 Linux 内核之一（虚拟机）</title>
+        <pubTime>2017-04-19T11:19:25.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>kernel</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tech" url="https://cloverii.github.io/categories/Tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cloverii.github.io/2017-04-16/wtm-2017-gdg-chongqing/</loc>
     <lastmod>2017-04-19T03:09:48.021Z</lastmod>
     <data>
@@ -74,9 +118,9 @@
         <title>LeetCode 31. Next Permutation</title>
         <pubTime>2017-04-15T14:31:34.000Z</pubTime>
         
-        <tag>LeetCode</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>LeetCode</tag>
          
          
            
@@ -97,9 +141,9 @@
         <title>从 K Sum 问题想到的</title>
         <pubTime>2017-03-26T08:32:14.000Z</pubTime>
         
-        <tag>LeetCode</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>LeetCode</tag>
          
          
            
