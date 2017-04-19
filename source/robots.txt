@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /about/
+Disallow: /js/
+Disallow: /css/
+Disallow: /page/
+Sitemap: https://cloverii.github.io/sitemap.xml
+Sitemap: https://cloverii.github.io/baidusitemap.xml
