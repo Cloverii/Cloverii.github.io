@@ -2,12 +2,9 @@ User-agent: *
 Allow: /
 Allow: /archives/
 Allow: /categories/
-Allow: /tags/ 
-Disallow: /vendors/
+Allow: /about/
 Disallow: /js/
 Disallow: /css/
-Disallow: /fonts/
-Disallow: /vendors/
-Disallow: /fancybox/
+Disallow: /page/
 Sitemap: https://cloverii.github.io/sitemap.xml
 Sitemap: https://cloverii.github.io/baidusitemap.xml
