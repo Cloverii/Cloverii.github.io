@@ -6,6 +6,17 @@ tags: [LeetCode, Algorithm]
 ---
 [题目链接](https://leetcode.com/problems/next-permutation/#/description)
 
+> mplement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
+>
+> If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).
+>
+> The replacement must be in-place, do not allocate extra memory.
+>
+> Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.
+> `1,2,3` → `1,3,2`
+> `3,2,1` → `1,2,3`
+> `1,1,5` → `1,5,1`
+
 <!--more-->
 
 乍一看没啥头绪 - - ，于是参考了 C++ 的 `std::next_permutation()` 的实现和[这个问题下排名第一的仁兄的答案](http://stackoverflow.com/questions/11483060/stdnext-permutation-implementation-explanation)。
