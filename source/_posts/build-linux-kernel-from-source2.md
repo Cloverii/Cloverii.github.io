@@ -1,7 +1,7 @@
 ---
 title: 从源码编译安装 Linux 内核之二（服务器）
 date: 2017-04-19 19:52:46
-categories: Tech
+categories: TECH
 tags: [Linux, kernel]
 ---
 ## 从头再来
@@ -93,3 +93,5 @@ reboot
 ```
 
 欲知后事如何，且听下回分解。
+
+第三篇预计内容是这次编译内核过程中涨的知识~
