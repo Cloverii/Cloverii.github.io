@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://cloverii.github.io/2017-04-19/build-linux-kernel-from-source1/</loc>
+    <lastmod>2017-05-02T16:27:13.757Z</lastmod>
+    <data>
+        <display>
+        <title>从源码编译安装 Linux 内核之一（虚拟机）</title>
+        <pubTime>2017-04-19T11:19:25.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>kernel</tag>
+         
+         
+           
+             
+              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cloverii.github.io/2017-03-09/log-in-campus-network-on-ubuntu/</loc>
     <lastmod>2017-05-02T16:04:52.228Z</lastmod>
     <data>
@@ -98,28 +120,6 @@
         <display>
         <title>从源码编译安装 Linux 内核之二（服务器）</title>
         <pubTime>2017-04-19T11:52:46.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>kernel</tag>
-         
-         
-           
-             
-              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cloverii.github.io/2017-04-19/build-linux-kernel-from-source1/</loc>
-    <lastmod>2017-04-22T05:35:06.862Z</lastmod>
-    <data>
-        <display>
-        <title>从源码编译安装 Linux 内核之一（虚拟机）</title>
-        <pubTime>2017-04-19T11:19:25.000Z</pubTime>
         
         <tag>Linux</tag>
          
