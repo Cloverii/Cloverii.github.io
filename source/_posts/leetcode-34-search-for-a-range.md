@@ -6,7 +6,7 @@ tags: [Algorithm, LeetCode]
 ---
 **Keywords: Binary Search**
 
-## 基本姿势 lower_bound && upper_bound
+### 基本姿势 lower_bound && upper_bound
 [34. 题目链接](https://leetcode.com/problems/search-for-a-range/#/description)
 
 > Given an array of integers sorted in ascending order, find the starting and ending position of a given target value.
@@ -67,7 +67,7 @@ trick2:
 `nums[m] <= target`，target 写在右边
 为了 C++ 的范型？向 STL 看齐？but 我现在好像是在写 Java…以及以 target 为基准判断更自然嘛，所以我还是选择不这么写 [冷漠.jpg]
 
-## 进阶理解
+### 进阶理解
 [33. Search in Rotated Sorted Array 题目链接](https://leetcode.com/problems/search-in-rotated-sorted-array)
 > Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 >

@@ -4,7 +4,7 @@
 
 # Site
 title: WMW's Blog
-subtitle: 好想赶快变强呢
+subtitle: 只有进步能使我平静
 description: Start from Zero
 author: Cloverii
 language: zh-CN
@@ -39,8 +39,8 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: false
-  auto_detect: false
+  line_number: true
+  auto_detect: true
   tab_replace:
 
 # Category & Tag
