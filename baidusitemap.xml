@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://cloverii.github.io/2017-03-09/log-in-campus-network-on-ubuntu/</loc>
+    <lastmod>2017-05-02T16:04:52.228Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu 下登陆 Drcom 校园网（重庆大学可用）</title>
+        <pubTime>2017-03-09T15:35:52.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Dr.com</tag>
+         
+         
+           
+             
+              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cloverii.github.io/2017-05-02/leetcode-50-pow-x-n/</loc>
     <lastmod>2017-05-02T15:01:37.720Z</lastmod>
     <data>
@@ -249,28 +271,6 @@
            
              
               <breadCrumb title="OTHERS" url="https://cloverii.github.io/categories/OTHERS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cloverii.github.io/2017-03-09/log-in-campus-network-on-ubuntu/</loc>
-    <lastmod>2017-04-04T13:07:05.392Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu 下登陆 Drcom 校园网（重庆大学可用）</title>
-        <pubTime>2017-03-09T15:35:52.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Dr.com</tag>
-         
-         
-           
-             
-              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
           
         </display>
     </data>

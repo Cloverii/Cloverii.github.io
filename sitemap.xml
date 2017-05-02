@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cloverii.github.io/2017-03-09/log-in-campus-network-on-ubuntu/</loc>
+    
+    <lastmod>2017-05-02T16:04:52.228Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://cloverii.github.io/2017-05-02/leetcode-50-pow-x-n/</loc>
     
     <lastmod>2017-05-02T15:01:37.720Z</lastmod>
@@ -89,13 +96,6 @@
     <loc>https://cloverii.github.io/2017-04-09/my-gsoc-2017/</loc>
     
     <lastmod>2017-04-09T03:52:49.762Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cloverii.github.io/2017-03-09/log-in-campus-network-on-ubuntu/</loc>
-    
-    <lastmod>2017-04-04T13:07:05.392Z</lastmod>
     
   </url>
   
