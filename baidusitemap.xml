@@ -4,6 +4,72 @@
 
     
   <url>
+    <loc>https://cloverii.github.io/2017-05-02/leetcode-50-pow-x-n/</loc>
+    <lastmod>2017-05-02T14:16:36.776Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 50. Pow(x, n) 中的小 trick</title>
+        <pubTime>2017-05-02T11:49:17.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Algorithm</tag>
+         
+         
+           
+             
+              <breadCrumb title="LEARNING" url="https://cloverii.github.io/categories/LEARNING/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017-04-21/leetcode-34-search-for-a-range/</loc>
+    <lastmod>2017-04-29T06:29:31.965Z</lastmod>
+    <data>
+        <display>
+        <title>两道二分题 LeetCode 33 & 34</title>
+        <pubTime>2017-04-21T15:46:26.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>Algorithm</tag>
+         
+         
+           
+             
+              <breadCrumb title="LEARNING" url="https://cloverii.github.io/categories/LEARNING/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017-04-16/wtm-2017-gdg-chongqing/</loc>
+    <lastmod>2017-04-29T06:29:03.117Z</lastmod>
+    <data>
+        <display>
+        <title>Women Techmakers 2017 GDG Chongqing</title>
+        <pubTime>2017-04-16T13:34:26.000Z</pubTime>
+        
+        <tag>Thoughts</tag>
+         
+        <tag>GDG</tag>
+         
+         
+           
+             
+              <breadCrumb title="OTHERS" url="https://cloverii.github.io/categories/OTHERS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cloverii.github.io/2017-04-19/build-linux-kernel-from-source2/</loc>
     <lastmod>2017-04-23T06:39:24.023Z</lastmod>
     <data>
@@ -26,28 +92,6 @@
 
     
   <url>
-    <loc>https://cloverii.github.io/2017-04-21/leetcode-34-search-for-a-range/</loc>
-    <lastmod>2017-04-23T06:00:39.043Z</lastmod>
-    <data>
-        <display>
-        <title>两道二分题 LeetCode 33 & 34</title>
-        <pubTime>2017-04-21T15:46:26.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="LEARNING" url="https://cloverii.github.io/categories/LEARNING/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://cloverii.github.io/2017-04-19/build-linux-kernel-from-source1/</loc>
     <lastmod>2017-04-22T05:35:06.862Z</lastmod>
     <data>
@@ -63,28 +107,6 @@
            
              
               <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cloverii.github.io/2017-04-16/wtm-2017-gdg-chongqing/</loc>
-    <lastmod>2017-04-22T01:38:02.528Z</lastmod>
-    <data>
-        <display>
-        <title>Women Techmakers 2017 GDG Chongqing</title>
-        <pubTime>2017-04-16T13:34:26.000Z</pubTime>
-        
-        <tag>Thoughts</tag>
-         
-        <tag>GDG</tag>
-         
-         
-           
-             
-              <breadCrumb title="OTHERS" url="https://cloverii.github.io/categories/OTHERS/"/>
           
         </display>
     </data>
