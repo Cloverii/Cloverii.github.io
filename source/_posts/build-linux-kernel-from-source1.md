@@ -19,7 +19,7 @@ kernel 2.6.26
 ```bash
 apt-get install build-essential
 ```
-2. 从[官网](www.kernel.org)下载并解压源代码
+2. 从[官网](https://www.kernel.org)下载并解压源代码
    我下载的是 2.6.26 版本。
 ```bash
 wget https://www.kernel.org/pub/linux/kernel/v2.6/linux-2.6.26.tar.gz

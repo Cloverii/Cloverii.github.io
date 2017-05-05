@@ -5,14 +5,16 @@ categories: LEARNING
 tags: [Algorithm, LeetCode]
 ---
 
-一句话概括：这题很多 [solutions](https://leetcode.com/problems/powx-n/#/solutions) 有问题，但是没有办法卡掉错的 solutions。
+1. 这题很多 [solutions](https://leetcode.com/problems/powx-n/#/solutions) 有问题，但是没有办法卡掉错的 solutions。
+2. 负数右移是 implementation-dependent 的行为。
+3. 需要用到 abs() 的时候记得考虑 INT_MIN。
 
 [题目链接](https://leetcode.com/problems/powx-n/#/description)
 
 > Implement pow(*x*, *n*).
 
 <!--more-->
-### 一开始的写法和 trick
+### 一开始的写法和 trick （不要参考这份代码）
 函数原型如下。底数为 double 类型，指数为 int 类型。
 ```c++
 double myPow(double x, int n)
@@ -62,7 +64,7 @@ A.cpp:9:28: warning: conversion to ‘long long unsigned int’ from ‘int’ m
 所以这份 solution 通过把 p 声明成 unsigned long long 成功地避开了无限循环，但得到的也并不是期望的结果，那为什么能 A 呢？思考一下就会发现，当指数为 INT_MIN 时，除了底数为 1.0 时结果为 1，其他情况结果不是 0 就是 inf，所以根本没有可以卡掉这个错误写法的数据……所以，就这样吧……
 
 ### 用 % 和 / 代替位运算
-本来应该到此结束了的，但是我又瞅了瞅[其他 solutions](https://discuss.leetcode.com/topic/3636/my-answer-using-bit-operation-c-implementation)，意识到了一个问题：如果把~~装13的~~位运算换成正经的 % 和 /，就没有必要对 n 进行 abs() 了。所以代码可以写成这样：
+本来应该到此结束了的，但是我又瞅了瞅[其他 solutions](https://discuss.leetcode.com/topic/3636/my-answer-using-bit-operation-c-implementation)，意识到了一个问题：如果把~~装13的~~位运算换成正经的 % 和 /，由于除法是向 0 取值，就没有必要对 n 进行 abs() 了。所以代码可以写成这样：
 ```c++
 class Solution {
 public:
@@ -82,12 +84,12 @@ public:
 ```
 注意上面的链接里有的解法出现了求 -n 的语句，但是我认为加上这句代码毫无意义，除了能说明作者并不懂类型转换。
 
-话说用位运算代替除法还是写 ACM 代码留下的后遗症……看来今后还是得长点心，毕竟负数情况下表现就不一致了。而且这样装模作样地替编译器优化并没有什么实际意义。学了体系结构，对编译器优化的理解确实又上了一个层次。
+又查了查，发现负数右移也是 implementation-dependent，所以自己还是太想当然了……话说用位运算代替除法还是写 ACM 代码留下的后遗症……看来今后还是得长点心啦，而且这样装模作样地替编译器优化并没有什么实际意义。
+
+感觉需要重读 K&R 了耶。
 
 ### 其他参考
 
 https://gcc.gnu.org/wiki/NewWconversion
 http://stackoverflow.com/questions/4975340/int-to-unsigned-int-conversion
-
-
-
+http://stackoverflow.com/questions/7622/are-the-shift-operators-arithmetic-or-logical-in-c
