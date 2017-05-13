@@ -1,8 +1,8 @@
 ---
 title: LeetCode 31. Next Permutation
 date: 2017-04-15 22:31:34
-categories: LEARNING
-tags: [LeetCode, Algorithm]
+categories: ALGORITHM
+tags: LeetCode
 ---
 [题目链接](https://leetcode.com/problems/next-permutation/#/description)
 

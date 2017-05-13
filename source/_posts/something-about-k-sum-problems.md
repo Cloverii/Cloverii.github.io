@@ -1,8 +1,8 @@
 ---
 title: 从 K Sum 问题想到的
 date: 2017-03-26 16:32:14
-categories: LEARNING
-tags: [Algorithm, LeetCode]
+categories: ALGORITHM
+tags: [LeetCode]
 ---
 LeetCode 上有好几道 K sum 的题：[1. Two Sum (E)](https://leetcode.com/problems/two-sum/#/description), [15. 3Sum (M)](https://leetcode.com/problems/3sum/#/description), [16. 3Sum Closest (M)](https://leetcode.com/problems/3sum-closest/), [18. 4Sum(M)](https://leetcode.com/problems/4sum/#/description)。大致就是给一个无序数组和一个 target，从数组里找出 k 个数使它们的和为 target （或最接近 target)。
 

@@ -1,5 +1,5 @@
 ---
-title: 从源码编译安装 Linux 内核之一（虚拟机）
+title: 从源码编译安装 Linux 内核之一
 date: 2017-04-19 19:19:25
 categories: TECH
 tags: [Linux, kernel]

@@ -1,8 +1,8 @@
 ---
 title: 两道二分题 LeetCode 33 & 34
 date: 2017-04-21 23:46:26
-categories: LEARNING
-tags: [Algorithm, LeetCode]
+categories: ALGORITHM
+tags: [LeetCode]
 ---
 **Keywords: Binary Search**
 

@@ -1,8 +1,8 @@
 ---
 title: LeetCode 50. Pow(x, n) 中的小 trick
 date: 2017-05-02 19:49:17
-categories: LEARNING
-tags: [Algorithm, LeetCode]
+categories: ALGORITHM
+tags: [LeetCode]
 ---
 
 1. 这题很多 [solutions](https://leetcode.com/problems/powx-n/#/solutions) 有问题，但是没有办法卡掉错的 solutions。

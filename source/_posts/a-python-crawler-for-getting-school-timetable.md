@@ -5,7 +5,7 @@ categories: TECH
 tags: Python
 ---
 ### 写在前面的废话
-说到查看课表，我估计大多数人还是用的超级课程表跟课程格子。超级课程表我大一刚入学的时候还用过来着，但是实在是太没节操了以致于我怀疑它是不是放弃了女性使用者。相对来说课程格子界面清爽很多，功能也够用，只是没课的时候点击 widget 默认进入“格子BBS”，让人很不爽，后来更是多了很多奇怪的推送。可我只想安安静静地看个课表啊……
+说到查看课表，我估计大多数人还是用的超级课程表跟课程格子。超级课程表我大一刚入学的时候还用过来着，但是实在是太没节操了以致于我怀疑它是不是放弃了女性使用者。相对来说课程格子界面清爽很多，功能也够用，只是没课的时候点击 widget 默认进入“格子BBS”，让人很不爽，后来更是多了很多奇怪的推送。可我只想安安静静地看个课表啊……为什么天朝的所有 APP 都要做社交呢？
 
 大二的时候我把手机换成了 Nexus 5X（没错，就是 LG 代工的那款升级 Nougat 之后爆了硬件问题可以全额退款的手机，可惜人在大陆没办法，于是这块砖现在还静静地躺在书架上。话题好像偏了……）总之我从换了手机之后开始用 Google Calendar 代替原本的课表 APP，非常完美。唯一的缺点是，每学期开学需要手动导入，懒癌患者又不想学 Python. ljf 聚聚说好的添课脚本至今没见到影子，无奈只好自己动手了。
 <!--more-->
@@ -43,7 +43,7 @@ efdfdfuuyyuuckjg:*********
 # Request Headers
 Cookie:ASP.NET_SessionId=byhlubbmgt33bpjp3ve0avra; 
 ```
-现在已经拿到了 cookies 和 表单，教务网也没有验证码，可以登录了。
+现在已经拿到了 cookies 和 表单，教务网也没有验证码，可以登录了。登录用到了 [`urllib`](https://docs.python.org/2/library/urllib.html) 和 [`urllib2`](https://docs.python.org/2/library/urllib2.html) 模块，可以查看文档。
 ```python
 postdata = urllib.urlencode({  
         'Sel_Type':'STU',
@@ -87,7 +87,7 @@ px:1
     str = res.read()
     return str.decode('gb2312').encode('utf-8')
 ```
-另外，开放式实验课的课表需要去[实验教学网](http://syjx.cqu.edu.cn/)上查，好在实验教学网提供了一个公共的[查课接口](http://syjx.cqu.edu.cn/admin/query/student)。这个就 so easy 了，我决定直接贴代码。
+另外，开放式实验课的课表需要去[实验教学网](http://syjx.cqu.edu.cn/)上查，好在实验教学网提供了一个公共的[查课接口](http://syjx.cqu.edu.cn/admin/query/student)，返回 JSON 数据，真是良心啊。这个 so easy, 我决定直接贴代码。
 ```python
 def getExCourses():
     postdata = urllib.urlencode({
@@ -101,7 +101,7 @@ def getExCourses():
 这两次查询有重复结果，下一篇再来讨论如何解析数据并且去重好了。
 
 ### 题外话：教务网的密码加密
-查看 [登录页面](http://202.202.1.176:8080/_data/index_login.aspx) 的源码，以 `efdfdfuuyyuuckjg` 为关键词搜索，注意到 `chkpwd()` 函数：
+查看 [登录页面](http://202.202.1.176:8080/_data/index_login.aspx) 的源码，以 `efdfdfuuyyuuckjg`（即 post data 中的密码） 为关键词搜索，注意到 `chkpwd()` 函数：
 ```js
 function chkpwd(obj)
             {
@@ -131,3 +131,5 @@ function chkpwd(obj)
 
 ### 参考
 https://wizardforcel.gitbooks.io/liaoxuefeng/py3/75.html
+https://docs.python.org/2/library/urllib.html
+https://docs.python.org/2/library/urllib2.html

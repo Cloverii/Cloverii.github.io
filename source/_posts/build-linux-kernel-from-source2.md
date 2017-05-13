@@ -1,5 +1,5 @@
 ---
-title: 从源码编译安装 Linux 内核之二（服务器）
+title: 从源码编译安装 Linux 内核之二
 date: 2017-04-19 19:52:46
 categories: TECH
 tags: [Linux, kernel]

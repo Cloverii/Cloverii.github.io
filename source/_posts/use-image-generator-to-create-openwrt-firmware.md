@@ -90,7 +90,7 @@ scp root@138.197.222.50:/root/openwrt/OpenWrt-ImageBuilder-15.05.1-ar71xx-generi
 ```
 (root 权限执行会报错)
 
-接下来就是[刷入及配置](/2017/03/17/upgrade-firmware-of-my-router/)啦。
+接下来就是[刷入及配置](/2017-03-17/upgrade-firmware-of-my-router/)啦。
 
 ### 还参考了
 https://cokebar.info/archives/90
