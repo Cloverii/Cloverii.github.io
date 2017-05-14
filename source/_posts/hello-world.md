@@ -65,74 +65,11 @@ https 方式每次 push 都需要验证用户名密码，不建议。
 
 **如果要把本地 Hexo 文件也备份到 Github 的话，这里不要直接 clone 作者的版本，参见我的[下一篇文章](/2017/02/26/back-up-blog/)。**
 
-***补充***
+另外，我对主题进行了一些定制，具体见[这篇文章](/2017-05-14/blog-tricks/)。
 
-*某次重装系统之后， hexo 安装好之后执行 `hexo s` 虽然看起来还算正常但报了奇怪的错误，似乎是 sass 的问题，按照提示执行 `npm rebuild node-sass` 之后再执行 `hexo s` 直接 `Bus error (core dumped)` 了。无奈执行 `npm uninstall hexo-renderer-sass` 准备卸载重装，然而卸载完 server 似乎就正常了……感觉非常微妙，凑合用着吧*
+**补充**
 
-### 修改主题配置
-
-找到站点文件夹里的 `themes/maupassant/_config.yml` 文件，这份是**主题配置文件**。
-
-#### 注释 RSS 订阅页面
-```
-menu:
-  - page: home
-    directory: .
-    icon: fa-home
-  - page: archive
-    directory: archives/
-    icon: fa-archive 
-  - page: about
-    directory: about/
-    icon: fa-user
-#  - page: rss
-#    directory: atom.xml
-#    icon: fa-rss
-```
-#### 修改网站图标
-
-嗯……图标不知道有木有人知道出处，是某灵异漫画里御姐女主的花押。印象里是贴吧的好孩子修复的，已经联系不到人了。
-
-用 [Background Burner](https://burner.bonanza.com/) 抠的图，[](https://iconverticons.com/online/) 转的 .ico。感谢以上工具的开发者。
-
-#### 删除首页显示文章评论数
-换 disqus 之后不知为何首页文章评论数总有几篇文章不能正常显示，disqus 访问的问题？干脆删了。
-`/themes/maupassant/layout/index.jade` 中删除下面的语句。
-
-```
-      if theme.duoshuo
-        a.ds-thread-count(data-thread-key=post.path, href=url_for(post.path) + '#comments')
-	  if theme.disqus
-        a.disqus-comment-count(data-disqus-identifier=post.path, href=url_for(post.path) + '#disqus_thread')
-```
-***补充***
-多说已于 2017.06.01 停止服务，改用 disqus。
-#### ~~添加多说评论~~
-
-参考了[知名主题 `NexT` 的文档](http://theme-next.iissnan.com/third-party-services.html)
-
-#### ~~删除多说评论框的分享~~
-
-多说的分享太花了，干脆删除之。
-
-打开 `themes/maupassant/layout/post.jade`，删除下面的代码（36-50行）。
-```
-    if theme.duoshuo
-      div(class='ds-share flat' data-thread-key=page.path, data-title=page.title, data-url=page.permalink)
-         .ds-share-inline
-            ul.ds-share-icons-16
-              li(data-toggle='ds-share-icons-more')
-                a(class='ds-more' href='javascript:void(0);') 分享到：
-              li
-                a(class='ds-weibo' href='javascript:void(0);' data-service='weibo') 微博
-              li
-                a(class='ds-qzone' href='javascript:void(0);' data-service='qzone') QQ空间
-              li
-                a(class='ds-qqt' href='javascript:void(0);' data-service='qqt') 腾讯微博
-              li
-                a(class='ds-wechat' href='javascript:void(0);' data-service='wechat') 微信
-            .ds-share-icons-more
-```
+某次重装系统之后， hexo 安装好之后执行 `hexo s` 虽然看起来还算正常但报了奇怪的错误，似乎是 sass 的问题，按照提示执行 `npm rebuild node-sass` 之后再执行 `hexo s` 直接 `Bus error (core dumped)` 了。无奈执行 `npm uninstall hexo-renderer-sass` 准备卸载重装，然而卸载完 server 似乎就正常了……感觉非常微妙，凑合用着吧。
 
 ## 还参考了
 

@@ -3,7 +3,7 @@ title: Git 学习记录
 date: 2017-03-17 00:19:40
 categories: LEARNING
 tags: [Git]
-toc: true
+toc: 2
 ---
 
 一不留神把去年学习 Git 时候的笔记翻出来了，稍作整理发出来。半年多后发现自己能记住的还是那几个常用的命令 - - 以及那个时候我的系统语言居然还是中文 233
@@ -33,7 +33,7 @@ toc: true
 	git add -u #stages modified and deleted, without new
 ```
 `git commit -m "This is the description" ` 把暂存区的修改提交到分支
-`git commit --amend` 修改最后一次提交的注释（在`.git/COMMIT_EDITMSG`中）
+`git commit --amend` 修改最后一次提交的注释（在`.git/COMMIT_EDITMSG`中，直接修改该文件不行）
 
 ## 修改
 
@@ -75,12 +75,12 @@ minway@Minway:~/leetcode$ git status
 ## 撤销修改
 
 - 在工作区修改，还未 add 到暂存区
-   `git commit checkout -- <file>` 
-    `checkout` 命令即为用版本库的版本替换工作区的版本
+   `git checkout -- <file>` 
+    `checkout` 命令即为把工作区的修改全部丢弃
 - 已 add 到暂存区
    `git reset HEAD file`
-    `git commit checkout -- <file>`
-- 已经提交到版本库
+    `git checkout -- <file>`
+- 已经提交到版本库，还没有推送到远程
    `git reset ***` 版本回退
 
 ## 删除文件
@@ -125,12 +125,13 @@ minway@Minway:~/leetcode$ git status
     last = lg -1
 ```
 
-## 一些场景
+## 一些问题
 
-fork 了某个仓库并做出了修改但又不能 PR，但又需要合并上游更新：
+### 场景1
+**fork 了某个仓库并做出了修改，不能 PR，但又需要合并上游更新**
 ```bash
 git remote add upstream git@github.com:tufu9441/maupassant-hexo.git
-git fetch upstream
+git fetch upstream master
 git checkout master #切换到本地 master 分支
 git merge upstream/master
 ```
@@ -145,6 +146,8 @@ Automatic merge failed; fix conflicts and then commit the result.
 如果文件需要修改 打开编辑器修改成需要的情况
 
 最后 `add + cm` 即可。
+### 一张图解释 reset 的三个 mode
+![](http://ooie9cjod.bkt.clouddn.com/17-5-14/76154188-file_1494723890692_8cf3.jpg)
 ## 参考
 
 [廖雪峰老师的 Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
@@ -153,3 +156,5 @@ https://tonydeng.github.io/2015/07/08/how-to-undo-almost-anything-with-git/
 http://jinlong.github.io/2015/10/12/syncing-a-fork/
 https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/
 http://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add
+https://git-scm.com/docs/git-reset
+http://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard

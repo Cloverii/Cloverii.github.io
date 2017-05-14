@@ -65,6 +65,15 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: maupassant
 
+# archive-generator
+archive_generator:
+  per_page: 0
+#  yearly: false
+#  monthly: false
+#  daily: true
+
+tag_generator:
+  per_page: 0
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

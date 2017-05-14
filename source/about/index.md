@@ -1,10 +1,8 @@
 ---
-title: About
+title: WMW
 layout: page
 comments: false
 ---
-
-# WMW
 
 Email: [cloveriiw@gmail.com](mailto:cloveriiw@gmail.com)
 

@@ -3,7 +3,7 @@ title: 博客主题 maupassant 挂掉了
 date: 2017-03-26 21:55:50
 tags:
 ---
-03-26 更新：
+**03-26 更新：**
 `git reset` 居然好了……原来只需要这么简单么？`diff` 了一下也就是 `package.json`里少了一行 `"hexo-render-sass": "0.2.0"`，迷惑。
 
 ***
