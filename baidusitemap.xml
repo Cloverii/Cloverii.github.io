@@ -3,7 +3,77 @@
 
 
     
+  <url>
+    <loc>https://cloverii.github.io/2017-05-14/blog-tricks/</loc>
+    <lastmod>2017-05-14T03:30:55.548Z</lastmod>
+    <data>
+        <display>
+        <title>博客主题的定制</title>
+        <pubTime>2017-05-14T01:44:03.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
     
+    
+    
+  <url>
+    <loc>https://cloverii.github.io/2017-03-17/learning-git/</loc>
+    <lastmod>2017-05-14T02:12:39.520Z</lastmod>
+    <data>
+        <display>
+        <title>Git 学习记录</title>
+        <pubTime>2017-03-16T16:19:40.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="LEARNING" url="https://cloverii.github.io/categories/LEARNING/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017-02-19/hello-world/</loc>
+    <lastmod>2017-05-14T01:52:26.712Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World -- 博客搭建记录</title>
+        <pubTime>2017-02-19T12:46:25.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017-03-26/something-wrong-with-blog-theme/</loc>
+    <lastmod>2017-05-14T01:51:01.184Z</lastmod>
+    <data>
+        <display>
+        <title>博客主题 maupassant 挂掉了</title>
+        <pubTime>2017-03-26T13:55:50.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>https://cloverii.github.io/2017-03-11/use-image-generator-to-create-openwrt-firmware/</loc>
@@ -228,61 +298,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>https://cloverii.github.io/2017-03-17/learning-git/</loc>
-    <lastmod>2017-04-17T11:58:16.476Z</lastmod>
-    <data>
-        <display>
-        <title>Git 学习记录</title>
-        <pubTime>2017-03-16T16:19:40.000Z</pubTime>
-        
-        <tag>Git</tag>
-         
-         
-           
-             
-              <breadCrumb title="LEARNING" url="https://cloverii.github.io/categories/LEARNING/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cloverii.github.io/2017-02-19/hello-world/</loc>
-    <lastmod>2017-04-17T11:16:49.544Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World -- 博客搭建记录</title>
-        <pubTime>2017-02-19T12:46:25.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cloverii.github.io/2017-03-26/something-wrong-with-blog-theme/</loc>
-    <lastmod>2017-04-15T15:16:41.878Z</lastmod>
-    <data>
-        <display>
-        <title>博客主题 maupassant 挂掉了</title>
-        <pubTime>2017-03-26T13:55:50.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://cloverii.github.io/2017-04-04/why-do-i-start-blogging/</loc>
