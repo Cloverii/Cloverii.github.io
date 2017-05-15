@@ -4,6 +4,87 @@
 
     
   <url>
+    <loc>https://cloverii.github.io/2015-09-14/hdu-4302-holedox-eating/</loc>
+    <lastmod>2017-05-15T11:09:45.719Z</lastmod>
+    <data>
+        <display>
+        <title>HDU 4302 Holedox Eating（线段树/优先队列/multiset）</title>
+        <pubTime>2015-09-14T15:58:00.000Z</pubTime>
+        
+        <tag>HDU</tag>
+         
+         
+           
+             
+              <breadCrumb title="ALGORITHM" url="https://cloverii.github.io/categories/ALGORITHM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017-04-04/why-do-i-start-blogging/</loc>
+    <lastmod>2017-05-15T11:03:50.379Z</lastmod>
+    <data>
+        <display>
+        <title>为什么要写博客</title>
+        <pubTime>2017-04-04T12:59:58.000Z</pubTime>
+        
+        <tag>Thoughts</tag>
+         
+         
+           
+             
+              <breadCrumb title="OTHERS" url="https://cloverii.github.io/categories/OTHERS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2015-08-29/poj-2528-mayor-s-posters/</loc>
+    <lastmod>2017-05-15T11:01:36.743Z</lastmod>
+    <data>
+        <display>
+        <title>POJ 2528 Mayor's posters（线段树染色+离散化）</title>
+        <pubTime>2015-08-29T08:39:00.000Z</pubTime>
+        
+        <tag>POJ</tag>
+         
+         
+           
+             
+              <breadCrumb title="ALGORITHM" url="https://cloverii.github.io/categories/ALGORITHM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://cloverii.github.io/2015-09-04/uva-10817-headmaster-s-headache/</loc>
+    <lastmod>2017-05-15T10:45:56.511Z</lastmod>
+    <data>
+        <display>
+        <title>UVA 10817 Headmaster's Headache（状压DP）</title>
+        <pubTime>2015-09-04T14:45:00.000Z</pubTime>
+        
+        <tag>UVA</tag>
+         
+         
+           
+             
+              <breadCrumb title="ALGORITHM" url="https://cloverii.github.io/categories/ALGORITHM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cloverii.github.io/2017-05-14/blog-tricks/</loc>
     <lastmod>2017-05-14T03:30:55.548Z</lastmod>
     <data>
@@ -17,7 +98,6 @@
     </data>
     </url>
 
-    
     
     
   <url>
@@ -298,26 +378,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>https://cloverii.github.io/2017-04-04/why-do-i-start-blogging/</loc>
-    <lastmod>2017-04-15T15:08:47.546Z</lastmod>
-    <data>
-        <display>
-        <title>为什么要写博客</title>
-        <pubTime>2017-04-04T12:59:58.000Z</pubTime>
-        
-        <tag>Thoughts</tag>
-         
-         
-           
-             
-              <breadCrumb title="OTHERS" url="https://cloverii.github.io/categories/OTHERS/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
     
   <url>
