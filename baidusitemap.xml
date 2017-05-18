@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://cloverii.github.io/2017-05-18/leetcode-75-and-partition/</loc>
+    <lastmod>2017-05-18T12:57:43.177Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 75. Sort Colors 与 partition</title>
+        <pubTime>2017-05-18T11:55:34.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+         
+           
+             
+              <breadCrumb title="ALGORITHM" url="https://cloverii.github.io/categories/ALGORITHM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cloverii.github.io/2015-09-14/hdu-4302-holedox-eating/</loc>
     <lastmod>2017-05-15T11:09:45.719Z</lastmod>
     <data>
@@ -342,9 +362,9 @@
         <title>Ubuntu 下登陆 Drcom 校园网（重庆大学可用）</title>
         <pubTime>2017-03-09T15:35:52.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Dr.com</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -408,9 +428,9 @@
         <title>路由器刷 OpenWrt 配置及破解 Dr.com</title>
         <pubTime>2017-03-17T11:10:26.000Z</pubTime>
         
-        <tag>Dr.com</tag>
-         
         <tag>OpenWrt</tag>
+         
+        <tag>Dr.com</tag>
          
          
            
