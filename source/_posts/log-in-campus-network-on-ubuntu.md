@@ -10,21 +10,3 @@ tags: [Ubuntu, Dr.com]
 路由器遇到了一些问题，待我装好再说~
 
 附[重大A区可用的文件](http://ooie9cjod.bkt.clouddn.com/drcom.py)。
-
-***
-TaoSama
-路由器是不是要刷openwrt才能弄啊
-3月9日回复顶转发
-***
-WantMinway
-回复 TaoSama: 我是这么干的呢，以及 openwrt 最好刷原版
-3月9日回复顶转发
-***
-WantMinway
-回复 TaoSama: 呸 平板上敲了两遍都没回复上 一气之下改用电脑
-3月9日回复顶转发举报
-***
-梁先锋
-学姐好棒
-3月22日回复顶转发
-***
