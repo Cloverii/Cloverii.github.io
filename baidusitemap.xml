@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>https://cloverii.github.io/2017-03-09/log-in-campus-network-on-ubuntu/</loc>
+    <lastmod>2017-05-19T15:17:28.081Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu 下登陆 Drcom 校园网（重庆大学可用）</title>
+        <pubTime>2017-03-09T15:35:52.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Dr.com</tag>
+         
+         
+           
+             
+              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017-05-19/leetcode-60-and-cantor-expansion/</loc>
+    <lastmod>2017-05-19T15:06:30.183Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 60. Permutation Sequence 与康托逆展开</title>
+        <pubTime>2017-05-19T04:57:16.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+         
+           
+             
+              <breadCrumb title="ALGORITHM" url="https://cloverii.github.io/categories/ALGORITHM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cloverii.github.io/2017-05-18/leetcode-75-and-partition/</loc>
     <lastmod>2017-05-18T12:57:43.177Z</lastmod>
     <data>
@@ -355,28 +397,6 @@
 
     
   <url>
-    <loc>https://cloverii.github.io/2017-03-09/log-in-campus-network-on-ubuntu/</loc>
-    <lastmod>2017-05-02T16:04:52.228Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu 下登陆 Drcom 校园网（重庆大学可用）</title>
-        <pubTime>2017-03-09T15:35:52.000Z</pubTime>
-        
-        <tag>Dr.com</tag>
-         
-        <tag>Ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://cloverii.github.io/2017-04-16/wtm-2017-gdg-chongqing/</loc>
     <lastmod>2017-04-29T06:29:03.117Z</lastmod>
     <data>
@@ -428,9 +448,9 @@
         <title>路由器刷 OpenWrt 配置及破解 Dr.com</title>
         <pubTime>2017-03-17T11:10:26.000Z</pubTime>
         
-        <tag>OpenWrt</tag>
-         
         <tag>Dr.com</tag>
+         
+        <tag>OpenWrt</tag>
          
          
            
