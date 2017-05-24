@@ -38,31 +38,26 @@ efdfdfuuyyuuckjg:*********
 ```
 显然 `Sel_Type` 是身份字段，`txt_dsdsdsdjkjkjc` 是学号。而`efdfdfuuyyuuckjg` 是加密后的密码。（后俩命名都是些什么鬼）经我验证其他字段都可以不填。
 
-而一长串的 headers 经我验证也只需要一行 cookies. 再次感慨一下水水的教务网～
-```
-# Request Headers
-Cookie:ASP.NET_SessionId=byhlubbmgt33bpjp3ve0avra; 
-```
-现在已经拿到了 cookies 和 表单，教务网也没有验证码，可以登录了。登录用到了 [`urllib`](https://docs.python.org/2/library/urllib.html) 和 [`urllib2`](https://docs.python.org/2/library/urllib2.html) 模块，可以查看文档。
+现在已经拿到了表单，教务网也没有验证码，可以登录了。登录用到了 [`urllib`](https://docs.python.org/2/library/urllib.html) 和 [`urllib2`](https://docs.python.org/2/library/urllib2.html) 模块，可以查看文档。
+
+当然，密码不能老是开 chrome 去拿表单，后面会提到如何加密。
+
 ```python
-postdata = urllib.urlencode({  
+    cookie = cookielib.CookieJar()
+    opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookie))
+    postdata = urllib.urlencode({  
         'Sel_Type':'STU',
         'txt_dsdsdsdjkjkjc':'20144666',
-        'efdfdfuuyyuuckjg':'*********'
+        'efdfdfuuyyuuckjg':'********'
     })
-    headers = {'Cookie':'ASP.NET_SessionId=byhlubbmgt33bpjp3ve0avra; ASPSESSIONIDQQTCCQAS=EGIHKHMDICJMHEJAEGKCEJHI'}
-    req = urllib2.Request(  
-        url = 'http://202.202.1.176:8080/_data/index_login.aspx',  
-        data = postdata,
-        headers = headers
-    )
+    req = urllib2.Request(url = 'http://222.198.128.126/_data/index_login.aspx', data = postdata)
     res = opener.open(req)
 ```
 登陆成功之后，还需要知道如何查询课表。
 ![](http://ooie9cjod.bkt.clouddn.com/17-5-6/58700645-file_1494000472790_c8f.png)
-教学安排 -> 查看个人课表 -> 检索 -> 得到表单，再附上 cookies 就好啦～
+教学安排 -> 查看个人课表 -> 检索 -> 得到表单，这就好啦～
 
-`Sel_XNXQ` 显然是学年学期，然而我尝试了下 20151 这个属性发现并不行，可能非当前学期的课表都被吃了吧……
+`Sel_XNXQ` 显然是学年学期，然而我尝试了下 `20151` 这个属性发现并不行，可能非当前学期的课表都被吃了吧……
 
 ```
 # Form Data
@@ -77,15 +72,9 @@ px:1
         'rad':'on',
         'px':'1'
     })
-    headers = {'Cookie':'ASP.NET_SessionId=byhlubbmgt33bpjp3ve0avra; ASPSESSIONIDQQTCCQAS=EGIHKHMDICJMHEJAEGKCEJHI'}
-    req = urllib2.Request(  
-        url = 'http://202.202.1.176:8080/znpk/Pri_StuSel_rpt.aspx',  
-        data = postdata,
-        headers = headers
-    )
+    req = urllib2.Request(url = 'http://222.198.128.126/znpk/Pri_StuSel_rpt.aspx', data = postdata)
     res = opener.open(req)
-    str = res.read()
-    return str.decode('gb2312').encode('utf-8')
+    str = res.read().decode('gb2312').encode('utf-8')
 ```
 另外，开放式实验课的课表需要去[实验教学网](http://syjx.cqu.edu.cn/)上查，好在实验教学网提供了一个公共的[查课接口](http://syjx.cqu.edu.cn/admin/query/student)，返回 JSON 数据，真是良心啊。这个 so easy, 我决定直接贴代码。
 ```python
@@ -120,9 +109,19 @@ function chkpwd(obj)
                 }
             }
 ```
-这段代码显然是 md5 加密来着，大家都能看懂，就不具体解释了。
+这段代码显然是 md5 加密来着。里面 `if(document.all.Sel_Type.value=="ADM")` 是针对“门户管理员”的，不用在意。
 
-我准备抽空再研究一下配置文件怎么写，这样就可以优雅地把代码丢上 Github 了呢～也方便（未来有可能用我这个小轮子的）大家填写密码。
+```python
+import hashlib
+
+def md5(str):
+    return hashlib.md5(str).hexdigest()
+
+schoolcode='10611'
+#var s=md5(yhm+md5(obj.value).substring(0,30).toUpperCase()+schoolcode).substring(0,30).toUpperCase();
+pswdMd5 = md5(stuID + md5(password)[0:30].upper()+schoolcode)[0:30].upper()
+```
+这样就可以把学号密码写进配置文件，脚本里自动生成加密后的密码了呢～再也不用去扒表单啦～
 
 ### 不是最后的最后
 感谢提供旧版查课源代码的 lc 学长。
