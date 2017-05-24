@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cloverii.github.io/2017-05-04/a-python-crawler-for-getting-school-timetable/</loc>
+    
+    <lastmod>2017-05-24T12:59:02.556Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://cloverii.github.io/2017-03-09/log-in-campus-network-on-ubuntu/</loc>
     
     <lastmod>2017-05-19T15:17:28.081Z</lastmod>
@@ -96,13 +103,6 @@
     <loc>https://cloverii.github.io/2017-03-11/use-image-generator-to-create-openwrt-firmware/</loc>
     
     <lastmod>2017-05-13T15:14:22.688Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cloverii.github.io/2017-05-04/a-python-crawler-for-getting-school-timetable/</loc>
-    
-    <lastmod>2017-05-13T14:23:06.932Z</lastmod>
     
   </url>
   

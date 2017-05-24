@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://cloverii.github.io/2017-05-04/a-python-crawler-for-getting-school-timetable/</loc>
+    <lastmod>2017-05-24T12:59:02.556Z</lastmod>
+    <data>
+        <display>
+        <title>Python 模拟登录教务网获取课表</title>
+        <pubTime>2017-05-04T13:03:25.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cloverii.github.io/2017-03-09/log-in-campus-network-on-ubuntu/</loc>
     <lastmod>2017-05-19T15:17:28.081Z</lastmod>
     <data>
@@ -226,26 +246,6 @@
         <pubTime>2017-03-11T06:11:08.000Z</pubTime>
         
         <tag>OpenWrt</tag>
-         
-         
-           
-             
-              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cloverii.github.io/2017-05-04/a-python-crawler-for-getting-school-timetable/</loc>
-    <lastmod>2017-05-13T14:23:06.932Z</lastmod>
-    <data>
-        <display>
-        <title>Python 模拟登录教务网获取课表</title>
-        <pubTime>2017-05-04T13:03:25.000Z</pubTime>
-        
-        <tag>Python</tag>
          
          
            
