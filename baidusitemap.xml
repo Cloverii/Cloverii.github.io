@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://cloverii.github.io/2017-05-02/leetcode-50-pow-x-n/</loc>
+    <lastmod>2017-05-28T03:36:49.469Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 50. Pow(x, n) 与二进制中1的个数</title>
+        <pubTime>2017-05-02T11:49:17.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+         
+           
+             
+              <breadCrumb title="ALGORITHM" url="https://cloverii.github.io/categories/ALGORITHM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cloverii.github.io/2017-05-04/a-python-crawler-for-getting-school-timetable/</loc>
     <lastmod>2017-05-24T13:15:08.177Z</lastmod>
     <data>
@@ -348,26 +368,6 @@
         <display>
         <title>从 K Sum 问题想到的</title>
         <pubTime>2017-03-26T08:32:14.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-         
-           
-             
-              <breadCrumb title="ALGORITHM" url="https://cloverii.github.io/categories/ALGORITHM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cloverii.github.io/2017-05-02/leetcode-50-pow-x-n/</loc>
-    <lastmod>2017-05-13T14:18:31.380Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 50. Pow(x, n) 中的小 trick</title>
-        <pubTime>2017-05-02T11:49:17.000Z</pubTime>
         
         <tag>LeetCode</tag>
          
