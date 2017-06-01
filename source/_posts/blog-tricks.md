@@ -1,8 +1,8 @@
 ---
 title: 博客主题的定制
 date: 2017-05-14 09:44:03
-categories:
-tags:
+categories: TECH
+tags: [Hexo]
 ---
 我使用的主题是[Maupassant](https://github.com/tufu9441/maupassant-hexo), 跟它的名字一样，小而美。不过作者本人表示这个主题更适合生活博客来着，具体表现在比如引用的样式上？抽空尝试研究下改一改好了。
 
@@ -66,13 +66,13 @@ tag_generator:
 
 ## 添加 404 页面
 在站点根目录下新建 `source/404.md`, 内容如下：（首页记得改成自己的）
-```
+```markdown
 ---
 title: 404
 layout: page
 comments: false
 ---
-### 嗨呀，好像出了什么问题……这个页面不存在了
+### 嗨呀，好像出了什么问题……这个页面找不到了
 
 页面将在<span id="jumpTo"></span>秒内自动跳转回[首页](https://cloverii.github.io)
 
@@ -91,24 +91,28 @@ function countDown(secs, surl) {
 <script type="text/javascript">countDown(5,'/');</script>
 ```
 
-## Todo
-1. 所有标题相关的字体和正文字体都不一样，导致文章里最高设二级标题有时候看起来就很奇怪，上次瞅了一下 css, 瞅得眼疼也搞不懂，有空再好好研究。
-2. 引用的样式，应该是修改 `themes/maupassant/source/css/style.scss` 里的这一块
-```
+## 修改引用样式
+
+默认的引用样式是一个大大的双引号（假装此处有图），就像开发者说的那样，可能更适合生活博客。参考 [**DonQvixote** 的 PR](https://github.com/tufu9441/maupassant-hexo/pull/266) 修改了一下。`themes/maupassant/source/css/style.scss` 里 `blockquote` 部分改成如下：
+
+```scss
+blockquote,.stressed {
+    padding: 0 1em;
+    color: rgb(106, 115, 125);
+    border-left: 0.25em solid rgb(223, 226, 229);
+}
 blockquote:before,.stressed-quote:before {
-    content: "\201C";
-    display: block;
-    font-family: times;
-    font-style: normal;
-    font-size: 48px;
-    color: #444;
-    font-weight: bold;
-    line-height: 30px;
-    margin-left: -50px;
-    position: absolute;
+    padding: 0 1em;
+    color: rgb(106, 115, 125);
+    border-left: 0.25em solid rgb(223, 226, 229);
 }
 ```
 
+
+
+## Todo
+
+1. 所有标题相关的字体和正文字体都不一样，导致文章里最高设二级标题有时候看起来就很奇怪，上次瞅了一下 css, 瞅得眼疼都没搞懂，有空再好好研究。
 ***补充***
 多说已宣布将于 2017.06.01 停止服务，改用 disqus。
 **~~添加多说评论~~**

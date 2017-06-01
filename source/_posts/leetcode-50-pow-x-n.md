@@ -2,16 +2,17 @@
 title: LeetCode 50. Pow(x, n) 与二进制中1的个数
 date: 2017-05-02 19:49:17
 categories: ALGORITHM
-tags: [LeetCode]
+tags: [LeetCode, C++]
 toc: true
 ---
 
 1. 这题很多 [solutions](https://leetcode.com/problems/powx-n/#/solutions) 有问题，但是没有办法卡掉。
-2. 需要用到 abs() 的时候记得考虑 INT_MIN, 且有符号数溢出是 undefined behavior.
-3. 有符号数右移是 implementation-dependent 的行为。
+2. 以下内容如果有牵扯到语言相关的特性，均针对 C/C++.
+3. 需要用到 abs() 的时候记得考虑 INT_MIN, 且有符号数溢出是 undefined behavior.
+4. 有符号数右移是 implementation-dependent 的行为。
    `0xFFFFFFFF(-1) >> 1`, 如果实现是算术右移的话，会导致死循环。
-4. 当负数转换为无符号类型时，得到的值应该是原数加上 2^n, n 是该无符号类型的位数。
-5. `lowbit()` 可以有一些巧妙的应用。
+5. 当负数转换为无符号类型时，得到的值应该是原数加上 2^n, n 是该无符号类型的位数。
+6. `lowbit()` 可以有一些奇妙的应用。
 
 [题目链接](https://leetcode.com/problems/powx-n/#/description)
 
@@ -26,7 +27,7 @@ toc: true
 ```c++
 double myPow(double x, int n)
 ```
-显然写个快速幂就好了，但是有一个 trick，n 可能为负数。这也很好办，加个 abs() 就行。但这又引发了一个新问题：n = INT_MIN 的时候，由于第7行 `long long nn = abs(n * 1LL);` 有一个 abs() 操作，所以要先把 n 强转成 long long 再 abs()，不然 `abs(INT_MIN) = INT_MAX + 1`（至于为什么会是这样，自行 Google 计算机中有符号数的存储形式——补码），这个数不在 int 的表示范围内，会发生溢出。我的习惯是乘上一个 1LL 代替显式转换。现在问题来了，为什么[这份 solution](https://discuss.leetcode.com/topic/17832/non-recursive-c-log-n-solution) 写 `unsigned long long p = -n;` 这种违反直觉的代码居然还能过呢？这里先向被我挂出来的这位老兄说句不好意思，并不是针对他……
+显然写个快速幂就好了，但是有一个 trick，n 可能为负数。这也很好办，加个 abs() 就行。但这又引发了一个新问题：n = INT_MIN 的时候，由于第7行 `long long nn = abs(1LL * n);` 有一个 abs() 操作，所以要先把 n 强转成 long long 再 abs()，不然 `abs(INT_MIN) = INT_MAX + 1`（至于为什么会是这样，自行 Google 计算机中有符号数的存储形式——补码），这个数不在 int 的表示范围内，会发生溢出。我的习惯是乘上一个 1LL 代替显式转换。现在问题来了，为什么[这份 solution](https://discuss.leetcode.com/topic/17832/non-recursive-c-log-n-solution) 写 `unsigned long long p = -n;` 这种违反直觉的代码居然还能过呢？这里先向被我挂出来的这位老兄说句不好意思，并不是针对他……
 ```c++
 class Solution { // This is my AC code
 public:
@@ -34,7 +35,8 @@ public:
         double base = x;
         if(n < 0) base = 1 / x;
         x = 1.0;
-        long long nn = abs(1LL * n); // unsigned long long p = -n; is wrong!
+        // unsigned long long p = -n; is wrong!
+        long long nn = abs(1LL * n); 
         while(nn != 0) {
             if(nn & 1)
                 x *= base;
@@ -56,7 +58,9 @@ public:
 ```c++
 int i = -2;
 unsigned int j = i;
-// 18446744073709551614
+unsigned long long k = i;
+cout << j << ' ' << k << endl;
+// 4294967294 18446744073709551614
 ```
 
 事实上，从负数到无符号类型的隐式类型转换会引起 warning，编译 C++ 时打开 `-Wsign-conversion` 编译选项就可以观察到：
@@ -64,7 +68,7 @@ unsigned int j = i;
 ```c++
 A.cpp: In function ‘int main()’:
 A.cpp:9:28: warning: conversion to ‘long long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
-     unsigned long long j = i;
+     unsigned long long k = i;
                             ^
 ```
 
@@ -101,7 +105,7 @@ public:
 - 逻辑移位：移位后空缺部分填0
 - 算术移位：算术左移同逻辑左移，算术右移空缺部分按最左边的一位（通常为符号位）填充
 
-[这里有个回答](https://stackoverflow.com/a/22734721) 总结得很好，我就直接贴了。
+[这里有个回答](https://stackoverflow.com/a/22734721)总结得很好，我就直接贴了。
 
 C/C++ 不像 Java 那样有两种右移操作符。在 C/C++中，无符号数移位显然是逻辑移位，而有符号数的右移操作则是 implementation-dependent, 大部分编译器实现为算术右移。当然，由于正数的符号位是0, 两种移位方式得到的结果并没有区别。
 
@@ -147,7 +151,7 @@ int numberOf1(int n) {
     return count;
 }
 ```
-顺便说下 gcc 是有 `__builtin_popcount()` 这种东西的，当然这个实现就非常有趣了。附个[网址](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=36041).
+顺便说下 GCC 是有 `__builtin_popcount()` 这种东西的，当然这个实现就非常有趣了。附个[网址](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=36041)。
 
 
 ### 其他参考
@@ -159,4 +163,4 @@ https://zh.wikipedia.org/wiki/%E4%BD%8D%E6%93%8D%E4%BD%9C
 http://stackoverflow.com/questions/4975340/int-to-unsigned-int-conversion
 http://stackoverflow.com/questions/7622/are-the-shift-operators-arithmetic-or-logical-in-c
 http://blog.csdn.net/tandesir/article/details/7385955
-何海涛. 剑指offer[Z]. 北京: 电子工业出版社,2014.
+何海涛. 剑指offer. 北京: 电子工业出版社,2014.
