@@ -4,6 +4,47 @@
 
     
   <url>
+    <loc>https://cloverii.github.io/2017-05-14/blog-tricks/</loc>
+    <lastmod>2017-06-01T02:11:59.189Z</lastmod>
+    <data>
+        <display>
+        <title>博客主题的定制</title>
+        <pubTime>2017-05-14T01:44:03.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="TECH" url="https://cloverii.github.io/categories/TECH/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cloverii.github.io/2017-06-01/about-may-2017/</loc>
+    <lastmod>2017-06-01T01:51:57.933Z</lastmod>
+    <data>
+        <display>
+        <title>5 月记录</title>
+        <pubTime>2017-06-01T00:25:59.000Z</pubTime>
+        
+        <tag>Thoughts</tag>
+         
+         
+           
+             
+              <breadCrumb title="OTHERS" url="https://cloverii.github.io/categories/OTHERS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>https://cloverii.github.io/2017-05-02/leetcode-50-pow-x-n/</loc>
     <lastmod>2017-05-28T03:55:21.452Z</lastmod>
     <data>
@@ -207,22 +248,6 @@
     </data>
     </url>
 
-    
-  <url>
-    <loc>https://cloverii.github.io/2017-05-14/blog-tricks/</loc>
-    <lastmod>2017-05-14T03:30:55.548Z</lastmod>
-    <data>
-        <display>
-        <title>博客主题的定制</title>
-        <pubTime>2017-05-14T01:44:03.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
     
   <url>
     <loc>https://cloverii.github.io/2017-03-17/learning-git/</loc>
