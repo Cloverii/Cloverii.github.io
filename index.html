@@ -31,7 +31,7 @@ ga('create','UA-99033470-1','auto');ga('send','pageview');</script></head><body>
 <li>以下内容如果有牵扯到语言相关的特性，均针对 C/C++.</li>
 <li>需要用到 abs() 的时候记得考虑 INT_MIN, 且有符号数溢出是 undefined behavior.</li>
 <li>有符号数右移是 implementation-dependent 的行为。<br><code>0xFFFFFFFF(-1) &gt;&gt; 1</code>, 如果实现是算术右移的话，会导致死循环。</li>
-<li>当负数转换为无符号类型时，得到的值应该是原数加上 2^n, n 是该无符号类型的位数。</li>
+<li>当负数转换为无符号类型时，得到的值是初始值对无符号类型表示数值总数取模后的余数。</li>
 <li><code>lowbit()</code> 可以有一些奇妙的应用。</li>
 </ol>
 <p><a href="https://leetcode.com/problems/powx-n/#/description">题目链接</a></p>

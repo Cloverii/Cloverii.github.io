@@ -3,6 +3,28 @@
 
 
     
+  <url>
+    <loc>https://cloverii.github.io/2017-05-02/leetcode-50-pow-x-n/</loc>
+    <lastmod>2017-06-12T08:54:29.571Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode 50. Pow(x, n) 与二进制中1的个数</title>
+        <pubTime>2017-05-02T11:49:17.000Z</pubTime>
+        
+        <tag>LeetCode</tag>
+         
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="ALGORITHM" url="https://cloverii.github.io/categories/ALGORITHM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://cloverii.github.io/2017-06-01/about-may-2017/</loc>
@@ -44,28 +66,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>https://cloverii.github.io/2017-05-02/leetcode-50-pow-x-n/</loc>
-    <lastmod>2017-05-28T03:55:21.452Z</lastmod>
-    <data>
-        <display>
-        <title>LeetCode 50. Pow(x, n) 与二进制中1的个数</title>
-        <pubTime>2017-05-02T11:49:17.000Z</pubTime>
-        
-        <tag>LeetCode</tag>
-         
-        <tag>C++</tag>
-         
-         
-           
-             
-              <breadCrumb title="ALGORITHM" url="https://cloverii.github.io/categories/ALGORITHM/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://cloverii.github.io/2017-05-04/a-python-crawler-for-getting-school-timetable/</loc>

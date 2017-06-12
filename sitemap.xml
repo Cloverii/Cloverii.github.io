@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cloverii.github.io/2017-05-02/leetcode-50-pow-x-n/</loc>
+    
+    <lastmod>2017-06-12T08:54:29.571Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://cloverii.github.io/about/index.html</loc>
     
     <lastmod>2017-06-12T08:27:42.921Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://cloverii.github.io/404.html</loc>
     
     <lastmod>2017-06-01T01:51:34.353Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cloverii.github.io/2017-05-02/leetcode-50-pow-x-n/</loc>
-    
-    <lastmod>2017-05-28T03:55:21.452Z</lastmod>
     
   </url>
   
