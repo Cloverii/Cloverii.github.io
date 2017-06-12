@@ -11,7 +11,7 @@ toc: true
 3. 需要用到 abs() 的时候记得考虑 INT_MIN, 且有符号数溢出是 undefined behavior.
 4. 有符号数右移是 implementation-dependent 的行为。
    `0xFFFFFFFF(-1) >> 1`, 如果实现是算术右移的话，会导致死循环。
-5. 当负数转换为无符号类型时，得到的值应该是原数加上 2^n, n 是该无符号类型的位数。
+5. 当负数转换为无符号类型时，得到的值是初始值对无符号类型表示数值总数取模后的余数。
 6. `lowbit()` 可以有一些奇妙的应用。
 
 [题目链接](https://leetcode.com/problems/powx-n/#/description)
@@ -53,7 +53,7 @@ public:
 
 下一个问题：既然在 LeetCode 的编译器下，-INT_MIN=INT_MIN，这个时候 unsigned long long p 的值是多少呢？
 
-好消息是，这个行为也是有定义的。当负数转换为无符号类型时，得到的值应该是原数加上 2^n，n 是该无符号类型的位数。
+好消息是，这个行为也是有定义的。当负数转换为无符号类型时，得到的值是初始值对无符号类型表示数值总数取模后的余数。
 
 ```c++
 int i = -2;
@@ -163,4 +163,5 @@ https://zh.wikipedia.org/wiki/%E4%BD%8D%E6%93%8D%E4%BD%9C
 http://stackoverflow.com/questions/4975340/int-to-unsigned-int-conversion
 http://stackoverflow.com/questions/7622/are-the-shift-operators-arithmetic-or-logical-in-c
 http://blog.csdn.net/tandesir/article/details/7385955
-何海涛. 剑指offer. 北京: 电子工业出版社,2014.
+何海涛（2014）。**剑指offer**。北京：电子工业出版社。
+王刚、杨巨峰（译）（2013）。**C++ Primer 中文版（第 5 版）**（原作者：Stanley B·Lippman, Josee Lajoie & Barbara E·Moo）。北京：电子工业出版社。（原著第五版出版于2012年）
