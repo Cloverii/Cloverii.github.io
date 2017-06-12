@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cloverii.github.io/about/index.html</loc>
+    
+    <lastmod>2017-06-12T07:52:22.555Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://cloverii.github.io/2017-06-01/about-may-2017/</loc>
     
     <lastmod>2017-06-05T02:28:22.258Z</lastmod>
@@ -82,13 +89,6 @@
     <loc>https://cloverii.github.io/2015-08-29/poj-2528-mayor-s-posters/</loc>
     
     <lastmod>2017-05-15T11:01:36.743Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cloverii.github.io/about/index.html</loc>
-    
-    <lastmod>2017-05-15T10:51:15.423Z</lastmod>
     
   </url>
   
